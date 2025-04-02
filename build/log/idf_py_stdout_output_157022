@@ -1,0 +1,1218 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f778h (194424) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f7a0 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f7c4 vaddr=3ffb0000 size=00854h (  2132) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2dc8h (667080) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2df0 vaddr=3ffb0854 size=03784h ( 14212) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e657c vaddr=40080000 size=17920h ( 96544) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (467) app_init: Application information:[0m
+[0;32mI (467) app_init: Project name:     wifiRelay[0m
+[0;32mI (471) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Apr  1 2025 16:05:30[0m
+[0;32mI (480) app_init: ELF file SHA256:  49076e2f7...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (493) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (497) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (523) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097920 len 000086E0 (33 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (614) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (624) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (624) wifi:wifi certification version: v7.0[0m
+[0;32mI (624) wifi:config NVS flash: enabled[0m
+[0;32mI (624) wifi:config nano formatting: disabled[0m
+[0;32mI (634) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (634) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (644) wifi:Init management short buffer num: 32[0m
+[0;32mI (644) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (654) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (654) wifi:Init static rx buffer num: 10[0m
+[0;32mI (654) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (664) wifi_init: rx ba win: 6[0m
+[0;32mI (664) wifi_init: accept mbox: 6[0m
+[0;32mI (664) wifi_init: tcpip mbox: 32[0m
+[0;32mI (674) wifi_init: udp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp mbox: 6[0m
+[0;32mI (674) wifi_init: tcp tx win: 5760[0m
+[0;32mI (684) wifi_init: tcp rx win: 5760[0m
+[0;32mI (684) wifi_init: tcp mss: 1440[0m
+[0;32mI (684) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (694) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (694) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (784) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (784) wifi:enable tsf[0m
+[0;32mI (784) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (794) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (924) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (924) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (944) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (954) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (974) wifi:connected with Redmi Note 11S, aid = 3, channel 13, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (974) wifi:security: WPA2-PSK, phy: bgn, rssi: -28[0m
+[0;32mI (984) wifi:pm start, type: 1[0m
+
+[0;32mI (984) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1024) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1024) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2014) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (2014) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (2014) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (2014) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (2024) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (2024) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (4034) ESP32_SSL: Time synchronized: Tue Apr  1 16:51:19 2025[0m
+
+[0;32mI (5474) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10464) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDEzMTA4NSwiaWF0IjoxNzQzNTI2Mjg1LCJqdGkiOiI3MTdhMzA2YTJiMWQ0N2YxODhlM2JhN2RmZWRhYTQzMSIsInVzZXJfaWQiOjF9.1UB5CNIgv2cdhDCfo_Lbv3bgE33YzuzB0YBa_9p2gkA","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNjEyNjg1LCJpYXQiOjE3NDM1MjYyODUsImp0aSI6IjY5OWJmNmFmNzlhOTQ5MWE5MGI3NTU2Y2RiNzI2YTVhIiwidXNlcl9pZCI6MX0.Bmx_EUqY_Is9CT0PyEGg0YaNDZA-LkXiP3ZYov_Muos"}[0m
+[0;32mI (10494) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQzNjEyNjg1LCJpYXQiOjE3NDM1MjYyODUsImp0aSI6IjY5OWJmNmFmNzlhOTQ5MWE5MGI3NTU2Y2RiNzI2YTVhIiwidXNlcl9pZCI6MX0.Bmx_EUqY_Is9CT0PyEGg0YaNDZA-LkXiP3ZYov_Muos[0m
+[0;32mI (10524) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (10534) main_task: Returned from app_main()[0m
+[0;32mI (10664) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (11904) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (13324) ESP32_SSL: Full Response: [0m
+[0;32mI (13744) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (13744) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (13744) ESP32_SSL: switch OK[0m
+[0;32mI (15094) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (17214) ESP32_SSL: Full Response: [0m
+[0;32mI (17624) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (17634) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (17634) ESP32_SSL: switch OK[0m
+[0;32mI (18994) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (20494) ESP32_SSL: Full Response: [0m
+[0;32mI (20904) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (20904) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (20904) ESP32_SSL: switch OK[0m
+[0;32mI (22244) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (23564) ESP32_SSL: Full Response: [0m
+[0;32mI (23974) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (23974) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (23974) ESP32_SSL: switch OK[0m
+[0;32mI (25334) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (26834) ESP32_SSL: Full Response: [0m
+[0;32mI (27254) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (27254) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (27254) ESP32_SSL: switch OK[0m
+[0;32mI (28604) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (30734) ESP32_SSL: Full Response: [0m
+[0;32mI (31144) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (31144) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (31144) ESP32_SSL: switch OK[0m
+[0;32mI (32514) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (34004) ESP32_SSL: Full Response: [0m
+[0;32mI (34424) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (34424) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (34424) ESP32_SSL: switch OK[0m
+[0;32mI (35764) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (37084) ESP32_SSL: Full Response: [0m
+[0;32mI (37494) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (37494) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (37504) ESP32_SSL: switch OK[0m
+[0;32mI (38874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (40564) ESP32_SSL: Full Response: [0m
+[0;32mI (40974) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (40974) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (40984) ESP32_SSL: switch OK[0m
+[0;32mI (42394) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (44454) ESP32_SSL: Full Response: [0m
+[0;32mI (44864) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (44864) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (44874) ESP32_SSL: switch OK[0m
+[0;32mI (46224) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (47724) ESP32_SSL: Full Response: [0m
+[0;32mI (48144) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (48144) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (48144) ESP32_SSL: switch OK[0m
+[0;32mI (49504) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (51044) ESP32_SSL: Full Response: [0m
+[0;32mI (51714) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (51714) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (51724) ESP32_SSL: switch OK[0m
+[0;32mI (53194) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (54994) ESP32_SSL: Full Response: [0m
+[0;32mI (55524) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (55524) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (55524) ESP32_SSL: switch OK[0m
+[0;32mI (56974) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (58384) ESP32_SSL: Full Response: [0m
+[0;32mI (58794) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (58794) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (58804) ESP32_SSL: switch OK[0m
+[0;32mI (60154) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (61764) ESP32_SSL: Full Response: [0m
+[0;32mI (62274) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (62274) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (62284) ESP32_SSL: switch OK[0m
+[0;32mI (63674) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (65204) ESP32_SSL: Full Response: [0m
+[0;32mI (65754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (65754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (65764) ESP32_SSL: switch OK[0m
+[0;32mI (67204) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (68824) ESP32_SSL: Full Response: [0m
+[0;32mI (69444) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (69444) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (69454) ESP32_SSL: switch OK[0m
+[0;32mI (70774) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (72414) ESP32_SSL: Full Response: [0m
+[0;32mI (72934) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (72934) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (72934) ESP32_SSL: switch OK[0m
+[0;32mI (74444) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (75834) ESP32_SSL: Full Response: [0m
+[0;32mI (76214) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (76214) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (76214) ESP32_SSL: switch OK[0m
+[0;32mI (77554) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (79064) ESP32_SSL: Full Response: [0m
+[0;32mI (79484) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (79484) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (79484) ESP32_SSL: switch OK[0m
+[0;32mI (80954) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (82344) ESP32_SSL: Full Response: [0m
+[0;32mI (82754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (82754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (82764) ESP32_SSL: switch OK[0m
+[0;32mI (84114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (85704) ESP32_SSL: Full Response: [0m
+[0;32mI (86244) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (86244) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (86244) ESP32_SSL: switch OK[0m
+[0;32mI (87594) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (89304) ESP32_SSL: Full Response: [0m
+[0;32mI (89724) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (89724) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (89724) ESP32_SSL: switch OK[0m
+[0;32mI (91164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (92584) ESP32_SSL: Full Response: [0m
+[0;32mI (92994) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (92994) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (93004) ESP32_SSL: switch OK[0m
+[0;32mI (94344) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (95864) ESP32_SSL: Full Response: [0m
+[0;32mI (96274) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (96274) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (96274) ESP32_SSL: switch OK[0m
+[0;32mI (97614) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (99134) ESP32_SSL: Full Response: [0m
+[0;32mI (99544) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (99554) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (99554) ESP32_SSL: switch OK[0m
+[0;32mI (100924) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (102614) ESP32_SSL: Full Response: [0m
+[0;32mI (103034) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (103034) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (103034) ESP32_SSL: switch OK[0m
+[0;32mI (104374) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (105894) ESP32_SSL: Full Response: [0m
+[0;32mI (106314) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (106314) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (106314) ESP32_SSL: switch OK[0m
+[0;32mI (107654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (108964) ESP32_SSL: Full Response: [0m
+[0;32mI (109374) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (109384) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (109384) ESP32_SSL: switch OK[0m
+[0;32mI (110724) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (112494) ESP32_SSL: Full Response: [0m
+[0;32mI (112964) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (112964) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (112974) ESP32_SSL: switch OK[0m
+[0;32mI (114654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (116234) ESP32_SSL: Full Response: [0m
+[0;32mI (116754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (116754) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (116754) ESP32_SSL: switch OK[0m
+[0;32mI (118214) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (119614) ESP32_SSL: Full Response: [0m
+[0;32mI (120034) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (120034) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (120044) ESP32_SSL: switch OK[0m
+[0;32mI (121464) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (123714) ESP32_SSL: Full Response: [0m
+[0;32mI (124134) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (124134) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (124134) ESP32_SSL: switch OK[0m
+[0;32mI (125464) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (127144) ESP32_SSL: Full Response: [0m
+[0;32mI (127604) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (127614) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (127614) ESP32_SSL: switch OK[0m
+[0;32mI (128974) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (130674) ESP32_SSL: Full Response: [0m
+[0;32mI (131084) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (131084) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (131094) ESP32_SSL: switch OK[0m
+[0;32mI (132454) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (133954) ESP32_SSL: Full Response: [0m
+[0;32mI (134364) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (134364) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (134374) ESP32_SSL: switch OK[0m
+[0;32mI (135704) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (137234) ESP32_SSL: Full Response: [0m
+[0;32mI (137644) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (137644) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (137644) ESP32_SSL: switch OK[0m
+[0;32mI (139014) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (140504) ESP32_SSL: Full Response: [0m
+[0;32mI (140914) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (140924) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (140924) ESP32_SSL: switch OK[0m
+[0;32mI (142284) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (143784) ESP32_SSL: Full Response: [0m
+[0;32mI (144194) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (144194) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (144204) ESP32_SSL: switch OK[0m
+[0;32mI (145524) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (146854) ESP32_SSL: Full Response: [0m
+[0;32mI (147264) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (147274) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (147274) ESP32_SSL: switch OK[0m
+[0;32mI (148624) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (150334) ESP32_SSL: Full Response: [0m
+[0;32mI (150744) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (150754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (150754) ESP32_SSL: switch OK[0m
+[0;32mI (152104) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (153824) ESP32_SSL: Full Response: [0m
+[0;32mI (154234) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (154234) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (154234) ESP32_SSL: switch OK[0m
+[0;32mI (155584) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (157304) ESP32_SSL: Full Response: [0m
+[0;32mI (158534) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (158534) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (158544) ESP32_SSL: switch OK[0m
+[0;32mI (159884) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (161394) ESP32_SSL: Full Response: [0m
+[0;32mI (161814) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (161814) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (161814) ESP32_SSL: switch OK[0m
+[0;32mI (163164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (164674) ESP32_SSL: Full Response: [0m
+[0;32mI (165084) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (165094) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (165094) ESP32_SSL: switch OK[0m
+[0;32mI (166464) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (167954) ESP32_SSL: Full Response: [0m
+[0;32mI (168364) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (168364) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (168364) ESP32_SSL: switch OK[0m
+[0;32mI (169744) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (171434) ESP32_SSL: Full Response: [0m
+[0;32mI (171844) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (171844) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (171854) ESP32_SSL: switch OK[0m
+[0;32mI (173214) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (174914) ESP32_SSL: Full Response: [0m
+[0;32mI (175524) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (175534) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (175534) ESP32_SSL: switch OK[0m
+[0;32mI (176894) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (178394) ESP32_SSL: Full Response: [0m
+[0;32mI (178804) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (178804) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (178814) ESP32_SSL: switch OK[0m
+[0;32mI (180164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (181874) ESP32_SSL: Full Response: [0m
+[0;32mI (182294) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (182294) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (182304) ESP32_SSL: switch OK[0m
+[0;32mI (183654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (185154) ESP32_SSL: Full Response: [0m
+[0;32mI (185564) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (185574) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (185574) ESP32_SSL: switch OK[0m
+[0;32mI (186924) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (188434) ESP32_SSL: Full Response: [0m
+[0;32mI (188844) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (188844) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (188854) ESP32_SSL: switch OK[0m
+[0;32mI (190224) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (191704) ESP32_SSL: Full Response: [0m
+[0;32mI (192124) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (192124) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (192134) ESP32_SSL: switch OK[0m
+[0;32mI (193464) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (194984) ESP32_SSL: Full Response: [0m
+[0;32mI (195394) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (195394) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (195404) ESP32_SSL: switch OK[0m
+[0;32mI (196724) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (198054) ESP32_SSL: Full Response: [0m
+[0;32mI (198464) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (198474) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (198474) ESP32_SSL: switch OK[0m
+[0;32mI (199864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (201334) ESP32_SSL: Full Response: [0m
+[0;32mI (201744) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (201744) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (201754) ESP32_SSL: switch OK[0m
+[0;32mI (203114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (204604) ESP32_SSL: Full Response: [0m
+[0;32mI (205024) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (205024) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (205034) ESP32_SSL: switch OK[0m
+[0;32mI (206054) wifi:<ba-add>idx:1 (ifx:0, 9a:db:b3:12:49:9f), tid:0, ssn:16, winSize:64[0m
+[0;32mI (206384) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (207884) ESP32_SSL: Full Response: [0m
+[0;32mI (208304) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (208304) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (208304) ESP32_SSL: switch OK[0m
+[0;32mI (209654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (211374) ESP32_SSL: Full Response: [0m
+[0;32mI (211784) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (211784) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (211784) ESP32_SSL: switch OK[0m
+[0;32mI (213104) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (214444) ESP32_SSL: Full Response: [0m
+[0;32mI (214854) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (214854) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (214864) ESP32_SSL: switch OK[0m
+[0;32mI (216184) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (217514) ESP32_SSL: Full Response: [0m
+[0;32mI (217924) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (217934) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (217934) ESP32_SSL: switch OK[0m
+[0;32mI (219284) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (220784) ESP32_SSL: Full Response: [0m
+[0;32mI (221204) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (221204) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (221214) ESP32_SSL: switch OK[0m
+[0;32mI (222564) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (224274) ESP32_SSL: Full Response: [0m
+[0;32mI (224684) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (224684) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (224684) ESP32_SSL: switch OK[0m
+[0;32mI (226044) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (227544) ESP32_SSL: Full Response: [0m
+[0;32mI (227964) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (227964) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (227964) ESP32_SSL: switch OK[0m
+[0;32mI (229334) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (230824) ESP32_SSL: Full Response: [0m
+[0;32mI (231244) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (231244) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (231244) ESP32_SSL: switch OK[0m
+[0;32mI (232614) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (234104) ESP32_SSL: Full Response: [0m
+[0;32mI (234514) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (234514) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (234524) ESP32_SSL: switch OK[0m
+[0;32mI (235844) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (237174) ESP32_SSL: Full Response: [0m
+[0;32mI (237594) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (237594) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (237594) ESP32_SSL: switch OK[0m
+[0;32mI (238934) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (240244) ESP32_SSL: Full Response: [0m
+[0;32mI (240664) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (240664) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (240664) ESP32_SSL: switch OK[0m
+[0;32mI (242084) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (243524) ESP32_SSL: Full Response: [0m
+[0;32mI (243934) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (243934) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (243944) ESP32_SSL: switch OK[0m
+[0;32mI (245274) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (247004) ESP32_SSL: Full Response: [0m
+[0;32mI (247424) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (247424) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (247424) ESP32_SSL: switch OK[0m
+[0;32mI (248804) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (250284) ESP32_SSL: Full Response: [0m
+[0;32mI (250694) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (250694) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (250694) ESP32_SSL: switch OK[0m
+[0;32mI (252064) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (253554) ESP32_SSL: Full Response: [0m
+[0;32mI (253974) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (253974) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (253974) ESP32_SSL: switch OK[0m
+[0;32mI (255314) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (256634) ESP32_SSL: Full Response: [0m
+[0;32mI (257044) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (257054) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (257054) ESP32_SSL: switch OK[0m
+[0;32mI (258444) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (259904) ESP32_SSL: Full Response: [0m
+[0;32mI (260314) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (260324) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (260324) ESP32_SSL: switch OK[0m
+[0;32mI (261654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (262974) ESP32_SSL: Full Response: [0m
+[0;32mI (263394) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (263394) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (263394) ESP32_SSL: switch OK[0m
+[0;32mI (264774) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (266254) ESP32_SSL: Full Response: [0m
+[0;32mI (266674) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (266674) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (266674) ESP32_SSL: switch OK[0m
+[0;32mI (268074) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (269534) ESP32_SSL: Full Response: [0m
+[0;32mI (269944) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (269944) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (269954) ESP32_SSL: switch OK[0m
+[0;32mI (271304) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (272814) ESP32_SSL: Full Response: [0m
+[0;32mI (273224) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (273224) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (273234) ESP32_SSL: switch OK[0m
+[0;32mI (274614) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (276294) ESP32_SSL: Full Response: [0m
+[0;32mI (276704) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (276704) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (276714) ESP32_SSL: switch OK[0m
+[0;32mI (278104) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (279774) ESP32_SSL: Full Response: [0m
+[0;32mI (280184) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (280194) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (280194) ESP32_SSL: switch OK[0m
+[0;32mI (281554) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (283044) ESP32_SSL: Full Response: [0m
+[0;32mI (283464) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (283464) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (283474) ESP32_SSL: switch OK[0m
+[0;32mI (284834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (286324) ESP32_SSL: Full Response: [0m
+[0;32mI (286744) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (286744) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (286744) ESP32_SSL: switch OK[0m
+[0;32mI (288104) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (289814) ESP32_SSL: Full Response: [0m
+[0;32mI (290424) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (290434) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (290434) ESP32_SSL: switch OK[0m
+[0;32mI (291804) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (293494) ESP32_SSL: Full Response: [0m
+[0;32mI (293904) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (293904) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (293914) ESP32_SSL: switch OK[0m
+[0;32mI (295264) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (296774) ESP32_SSL: Full Response: [0m
+[0;32mI (297194) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (297194) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (297194) ESP32_SSL: switch OK[0m
+[0;32mI (298554) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (300044) ESP32_SSL: Full Response: [0m
+[0;32mI (300464) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (300474) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (300474) ESP32_SSL: switch OK[0m
+[0;32mI (301804) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (303124) ESP32_SSL: Full Response: [0m
+[0;32mI (303534) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (303544) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (303544) ESP32_SSL: switch OK[0m
+[0;32mI (304894) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (306404) ESP32_SSL: Full Response: [0m
+[0;32mI (306814) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (306814) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (306814) ESP32_SSL: switch OK[0m
+[0;32mI (308164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (309674) ESP32_SSL: Full Response: [0m
+[0;32mI (310084) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (310084) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (310094) ESP32_SSL: switch OK[0m
+[0;32mI (311434) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (312954) ESP32_SSL: Full Response: [0m
+[0;32mI (313364) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (313364) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (313374) ESP32_SSL: switch OK[0m
+[0;32mI (314744) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (316224) ESP32_SSL: Full Response: [0m
+[0;32mI (316644) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (316644) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (316644) ESP32_SSL: switch OK[0m
+[0;32mI (317984) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (319304) ESP32_SSL: Full Response: [0m
+[0;32mI (319714) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (319714) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (319724) ESP32_SSL: switch OK[0m
+[0;32mI (321154) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (322784) ESP32_SSL: Full Response: [0m
+[0;32mI (323194) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (323194) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (323204) ESP32_SSL: switch OK[0m
+[0;32mI (324574) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (326054) ESP32_SSL: Full Response: [0m
+[0;32mI (326474) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (326484) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (326484) ESP32_SSL: switch OK[0m
+[0;32mI (327854) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (329334) ESP32_SSL: Full Response: [0m
+[0;32mI (329744) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (329754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (329754) ESP32_SSL: switch OK[0m
+[0;32mI (331084) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (332414) ESP32_SSL: Full Response: [0m
+[0;32mI (332814) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (332824) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (332824) ESP32_SSL: switch OK[0m
+[0;32mI (334224) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (335884) ESP32_SSL: Full Response: [0m
+[0;32mI (336504) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (336504) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (336514) ESP32_SSL: switch OK[0m
+[0;32mI (337854) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (339374) ESP32_SSL: Full Response: [0m
+[0;32mI (339784) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (339784) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (339784) ESP32_SSL: switch OK[0m
+[0;32mI (341154) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (342644) ESP32_SSL: Full Response: [0m
+[0;32mI (343064) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (343064) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (343064) ESP32_SSL: switch OK[0m
+[0;32mI (344504) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (346134) ESP32_SSL: Full Response: [0m
+[0;32mI (346544) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (346544) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (346544) ESP32_SSL: switch OK[0m
+[0;32mI (347874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (349204) ESP32_SSL: Full Response: [0m
+[0;32mI (349614) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (349614) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (349624) ESP32_SSL: switch OK[0m
+[0;32mI (350964) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (352274) ESP32_SSL: Full Response: [0m
+[0;32mI (352684) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (352684) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (352694) ESP32_SSL: switch OK[0m
+[0;32mI (354074) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (355754) ESP32_SSL: Full Response: [0m
+[0;32mI (356174) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (356174) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (356184) ESP32_SSL: switch OK[0m
+[0;32mI (357524) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (359034) ESP32_SSL: Full Response: [0m
+[0;32mI (359444) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (359444) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (359454) ESP32_SSL: switch OK[0m
+[0;32mI (360824) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (362314) ESP32_SSL: Full Response: [0m
+[0;32mI (362724) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (362724) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (362724) ESP32_SSL: switch OK[0m
+[0;32mI (364074) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (365384) ESP32_SSL: Full Response: [0m
+[0;32mI (365804) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (365804) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (365804) ESP32_SSL: switch OK[0m
+[0;32mI (367164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (368654) ESP32_SSL: Full Response: [0m
+[0;32mI (369074) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (369074) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (369074) ESP32_SSL: switch OK[0m
+[0;32mI (370414) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (371734) ESP32_SSL: Full Response: [0m
+[0;32mI (372144) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (372144) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (372144) ESP32_SSL: switch OK[0m
+[0;32mI (373494) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (375004) ESP32_SSL: Full Response: [0m
+[0;32mI (375424) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (375424) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (375434) ESP32_SSL: switch OK[0m
+[0;32mI (376764) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (378284) ESP32_SSL: Full Response: [0m
+[0;32mI (382794) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (382794) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (382804) ESP32_SSL: switch OK[0m
+[0;32mI (384174) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (385654) ESP32_SSL: Full Response: [0m
+[0;32mI (386074) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (386074) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (386074) ESP32_SSL: switch OK[0m
+[0;32mI (387424) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (388934) ESP32_SSL: Full Response: [0m
+[0;32mI (389344) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (389354) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (389354) ESP32_SSL: switch OK[0m
+[0;32mI (390734) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (392214) ESP32_SSL: Full Response: [0m
+[0;32mI (392624) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (392624) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (392634) ESP32_SSL: switch OK[0m
+[0;32mI (393974) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (396104) ESP32_SSL: Full Response: [0m
+[0;32mI (396514) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (396514) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (396524) ESP32_SSL: switch OK[0m
+[0;32mI (397884) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (399584) ESP32_SSL: Full Response: [0m
+[0;32mI (399994) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (399994) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (400004) ESP32_SSL: switch OK[0m
+[0;32mI (401334) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (402654) ESP32_SSL: Full Response: [0m
+[0;32mI (403074) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (403074) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (403074) ESP32_SSL: switch OK[0m
+[0;32mI (404424) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (405934) ESP32_SSL: Full Response: [0m
+[0;32mI (406344) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (406354) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (406354) ESP32_SSL: switch OK[0m
+[0;32mI (407724) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (409214) ESP32_SSL: Full Response: [0m
+[0;32mI (409624) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (409624) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (409634) ESP32_SSL: switch OK[0m
+[0;32mI (410974) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (412484) ESP32_SSL: Full Response: [0m
+[0;32mI (412904) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (412904) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (412904) ESP32_SSL: switch OK[0m
+[0;32mI (414284) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (415764) ESP32_SSL: Full Response: [0m
+[0;32mI (416184) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (416184) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (416184) ESP32_SSL: switch OK[0m
+[0;32mI (417544) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (419044) ESP32_SSL: Full Response: [0m
+[0;32mI (419454) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (419454) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (419464) ESP32_SSL: switch OK[0m
+[0;32mI (420874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (422524) ESP32_SSL: Full Response: [0m
+[0;32mI (422934) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (422934) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (422944) ESP32_SSL: switch OK[0m
+[0;32mI (424304) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (425804) ESP32_SSL: Full Response: [0m
+[0;32mI (426214) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (426214) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (426224) ESP32_SSL: switch OK[0m
+[0;32mI (427584) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (429074) ESP32_SSL: Full Response: [0m
+[0;32mI (429484) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (429494) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (429494) ESP32_SSL: switch OK[0m
+[0;32mI (430824) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (432154) ESP32_SSL: Full Response: [0m
+[0;32mI (432564) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (432564) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (432564) ESP32_SSL: switch OK[0m
+[0;32mI (433964) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (435424) ESP32_SSL: Full Response: [0m
+[0;32mI (435844) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (435844) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (435844) ESP32_SSL: switch OK[0m
+[0;32mI (437194) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (438904) ESP32_SSL: Full Response: [0m
+[0;32mI (439314) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (439324) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (439324) ESP32_SSL: switch OK[0m
+[0;32mI (440684) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (442184) ESP32_SSL: Full Response: [0m
+[0;32mI (442594) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (442594) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (442594) ESP32_SSL: switch OK[0m
+[0;32mI (443964) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (445454) ESP32_SSL: Full Response: [0m
+[0;32mI (445874) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (445874) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (445884) ESP32_SSL: switch OK[0m
+[0;32mI (447294) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (448734) ESP32_SSL: Full Response: [0m
+[0;32mI (449154) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (449154) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (449154) ESP32_SSL: switch OK[0m
+[0;32mI (450494) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (452014) ESP32_SSL: Full Response: [0m
+[0;32mI (452424) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (452424) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (452434) ESP32_SSL: switch OK[0m
+[0;32mI (453794) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (455294) ESP32_SSL: Full Response: [0m
+[0;32mI (455704) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (455704) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (455714) ESP32_SSL: switch OK[0m
+[0;32mI (457074) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (458564) ESP32_SSL: Full Response: [0m
+[0;32mI (458984) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (458984) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (458984) ESP32_SSL: switch OK[0m
+[0;32mI (460354) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (462054) ESP32_SSL: Full Response: [0m
+[0;32mI (462464) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (462464) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (462464) ESP32_SSL: switch OK[0m
+[0;32mI (463824) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (465334) ESP32_SSL: Full Response: [0m
+[0;32mI (465734) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (465744) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (465744) ESP32_SSL: switch OK[0m
+[0;32mI (467094) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (468604) ESP32_SSL: Full Response: [0m
+[0;32mI (469014) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (469024) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (469024) ESP32_SSL: switch OK[0m
+[0;32mI (470354) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (471884) ESP32_SSL: Full Response: [0m
+[0;32mI (472294) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (472304) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (472304) ESP32_SSL: switch OK[0m
+[0;32mI (473664) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (475154) ESP32_SSL: Full Response: [0m
+[0;32mI (475574) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (475574) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (475574) ESP32_SSL: switch OK[0m
+[0;32mI (476984) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (478434) ESP32_SSL: Full Response: [0m
+[0;32mI (478854) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (478854) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (478854) ESP32_SSL: switch OK[0m
+[0;32mI (480214) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (481714) ESP32_SSL: Full Response: [0m
+[0;32mI (482124) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (482124) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (482134) ESP32_SSL: switch OK[0m
+[0;32mI (483494) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (484984) ESP32_SSL: Full Response: [0m
+[0;32mI (485394) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (485404) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (485404) ESP32_SSL: switch OK[0m
+[0;32mI (486734) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (488264) ESP32_SSL: Full Response: [0m
+[0;32mI (488674) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (488674) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (488684) ESP32_SSL: switch OK[0m
+[0;32mI (490054) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (491544) ESP32_SSL: Full Response: [0m
+[0;32mI (491954) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (491964) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (491964) ESP32_SSL: switch OK[0m
+[0;32mI (493354) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (495024) ESP32_SSL: Full Response: [0m
+[0;32mI (495434) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (495434) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (495444) ESP32_SSL: switch OK[0m
+[0;32mI (496864) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (498504) ESP32_SSL: Full Response: [0m
+[0;32mI (498924) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (498924) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (498924) ESP32_SSL: switch OK[0m
+[0;32mI (500284) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (501784) ESP32_SSL: Full Response: [0m
+[0;32mI (502194) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (502194) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (502204) ESP32_SSL: switch OK[0m
+[0;32mI (503604) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (505264) ESP32_SSL: Full Response: [0m
+[0;32mI (505674) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (505674) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (505684) ESP32_SSL: switch OK[0m
+[0;32mI (507064) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (508744) ESP32_SSL: Full Response: [0m
+[0;32mI (509164) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (509164) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (509164) ESP32_SSL: switch OK[0m
+[0;32mI (510514) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (512024) ESP32_SSL: Full Response: [0m
+[0;32mI (512434) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (512434) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (512444) ESP32_SSL: switch OK[0m
+[0;32mI (513944) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (515294) ESP32_SSL: Full Response: [0m
+[0;32mI (515714) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (515714) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (515724) ESP32_SSL: switch OK[0m
+[0;32mI (517164) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (518574) ESP32_SSL: Full Response: [0m
+[0;32mI (518984) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (518994) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (518994) ESP32_SSL: switch OK[0m
+[0;32mI (520344) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (521854) ESP32_SSL: Full Response: [0m
+[0;32mI (522264) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (522264) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (522274) ESP32_SSL: switch OK[0m
+[0;32mI (523624) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (525134) ESP32_SSL: Full Response: [0m
+[0;32mI (525544) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (525544) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (525544) ESP32_SSL: switch OK[0m
+[0;32mI (526924) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (528614) ESP32_SSL: Full Response: [0m
+[0;32mI (529024) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (529024) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (529034) ESP32_SSL: switch OK[0m
+[0;32mI (530384) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (532094) ESP32_SSL: Full Response: [0m
+[0;32mI (532504) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (532504) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (532514) ESP32_SSL: switch OK[0m
+[0;32mI (533884) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (535364) ESP32_SSL: Full Response: [0m
+[0;32mI (535784) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (535784) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (535794) ESP32_SSL: switch OK[0m
+[0;32mI (537134) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (538644) ESP32_SSL: Full Response: [0m
+[0;32mI (539064) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (539064) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (539064) ESP32_SSL: switch OK[0m
+[0;32mI (540424) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (541924) ESP32_SSL: Full Response: [0m
+[0;32mI (542344) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (542344) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (542344) ESP32_SSL: switch OK[0m
+[0;32mI (543714) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (545404) ESP32_SSL: Full Response: [0m
+[0;32mI (545814) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (545814) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (545824) ESP32_SSL: switch OK[0m
+[0;32mI (547204) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (549294) ESP32_SSL: Full Response: [0m
+[0;32mI (549714) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (549714) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (549714) ESP32_SSL: switch OK[0m
+[0;32mI (551074) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (552574) ESP32_SSL: Full Response: [0m
+[0;32mI (552984) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (552984) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (552994) ESP32_SSL: switch OK[0m
+[0;32mI (554354) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (555844) ESP32_SSL: Full Response: [0m
+[0;32mI (556264) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (556264) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (556274) ESP32_SSL: switch OK[0m
+[0;32mI (557624) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (559334) ESP32_SSL: Full Response: [0m
+[0;32mI (559744) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (559744) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (559754) ESP32_SSL: switch OK[0m
+[0;32mI (561114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (562604) ESP32_SSL: Full Response: [0m
+[0;32mI (563014) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (563024) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (563024) ESP32_SSL: switch OK[0m
+[0;32mI (564334) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (565684) ESP32_SSL: Full Response: [0m
+[0;32mI (566094) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (566104) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (566104) ESP32_SSL: switch OK[0m
+[0;32mI (567434) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (568954) ESP32_SSL: Full Response: [0m
+[0;32mI (569364) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (569374) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (569374) ESP32_SSL: switch OK[0m
+[0;32mI (570734) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (572234) ESP32_SSL: Full Response: [0m
+[0;32mI (572644) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (572654) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (572654) ESP32_SSL: switch OK[0m
+[0;32mI (574004) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (575514) ESP32_SSL: Full Response: [0m
+[0;32mI (575924) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (575924) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (575934) ESP32_SSL: switch OK[0m
+[0;32mI (577284) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (578784) ESP32_SSL: Full Response: [0m
+[0;32mI (579204) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (579204) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (579204) ESP32_SSL: switch OK[0m
+[0;32mI (580614) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (582064) ESP32_SSL: Full Response: [0m
+[0;32mI (582484) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (582484) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (582484) ESP32_SSL: switch OK[0m
+[0;32mI (583814) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (585134) ESP32_SSL: Full Response: [0m
+[0;32mI (585754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (585754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (585754) ESP32_SSL: switch OK[0m
+[0;32mI (587104) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (588614) ESP32_SSL: Full Response: [0m
+[0;32mI (589034) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (589034) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (589034) ESP32_SSL: switch OK[0m
+[0;32mI (590424) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (591894) ESP32_SSL: Full Response: [0m
+[0;32mI (592314) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (592314) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (592314) ESP32_SSL: switch OK[0m
+[0;32mI (593664) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (595174) ESP32_SSL: Full Response: [0m
+[0;32mI (595584) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (595594) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (595594) ESP32_SSL: switch OK[0m
+[0;32mI (596954) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (598444) ESP32_SSL: Full Response: [0m
+[0;32mI (598864) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (598864) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (598874) ESP32_SSL: switch OK[0m
+[0;32mI (600224) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (602344) ESP32_SSL: Full Response: [0m
+[0;32mI (602754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (602754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (602764) ESP32_SSL: switch OK[0m
+[0;32mI (604114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (605614) ESP32_SSL: Full Response: [0m
+[0;32mI (606034) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (606034) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (606034) ESP32_SSL: switch OK[0m
+[0;32mI (607374) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (608894) ESP32_SSL: Full Response: [0m
+[0;32mI (609314) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (609314) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (609314) ESP32_SSL: switch OK[0m
+[0;32mI (610704) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (612174) ESP32_SSL: Full Response: [0m
+[0;32mI (612584) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (612584) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (612594) ESP32_SSL: switch OK[0m
+[0;32mI (613984) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (615444) ESP32_SSL: Full Response: [0m
+[0;32mI (615894) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (615894) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (615894) ESP32_SSL: switch OK[0m
+[0;32mI (617324) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (618974) ESP32_SSL: Full Response: [0m
+[0;32mI (619414) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (619424) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (619424) ESP32_SSL: switch OK[0m
+[0;32mI (621294) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (622824) ESP32_SSL: Full Response: [0m
+[0;32mI (623234) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (623234) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (623244) ESP32_SSL: switch OK[0m
+[0;32mI (624574) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (626214) ESP32_SSL: Full Response: [0m
+[0;32mI (626724) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (626724) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (626724) ESP32_SSL: switch OK[0m
+[0;32mI (628064) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (629634) ESP32_SSL: Full Response: [0m
+[0;32mI (630204) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (630204) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (630204) ESP32_SSL: switch OK[0m
+[0;32mI (631644) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (633064) ESP32_SSL: Full Response: [0m
+[0;32mI (633474) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (633474) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (633484) ESP32_SSL: switch OK[0m
+[0;32mI (634854) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (636334) ESP32_SSL: Full Response: [0m
+[0;32mI (636754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (636754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (636754) ESP32_SSL: switch OK[0m
+[0;32mI (638204) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (639894) ESP32_SSL: Full Response: [0m
+[0;32mI (640444) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (640444) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (640444) ESP32_SSL: switch OK[0m
+[0;32mI (641794) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (643304) ESP32_SSL: Full Response: [0m
+[0;32mI (643714) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (643714) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (643724) ESP32_SSL: switch OK[0m
+[0;32mI (645064) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (646784) ESP32_SSL: Full Response: [0m
+[0;32mI (647194) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (647194) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (647204) ESP32_SSL: switch OK[0m
+[0;32mI (648654) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (650064) ESP32_SSL: Full Response: [0m
+[0;32mI (650474) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (650484) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (650484) ESP32_SSL: switch OK[0m
+[0;32mI (651834) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (653334) ESP32_SSL: Full Response: [0m
+[0;32mI (653754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (653754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (653754) ESP32_SSL: switch OK[0m
+[0;32mI (655134) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (656614) ESP32_SSL: Full Response: [0m
+[0;32mI (657024) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (657024) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (657034) ESP32_SSL: switch OK[0m
+[0;32mI (658384) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (660094) ESP32_SSL: Full Response: [0m
+[0;32mI (660514) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (660514) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (660514) ESP32_SSL: switch OK[0m
+[0;32mI (661884) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (663374) ESP32_SSL: Full Response: [0m
+[0;32mI (663784) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (663784) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (663794) ESP32_SSL: switch OK[0m
+[0;32mI (665134) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (666644) ESP32_SSL: Full Response: [0m
+[0;32mI (667064) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (667064) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (667074) ESP32_SSL: switch OK[0m
+[0;32mI (668544) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (669924) ESP32_SSL: Full Response: [0m
+[0;32mI (670344) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (670344) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (670344) ESP32_SSL: switch OK[0m
+[0;32mI (671704) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (673204) ESP32_SSL: Full Response: [0m
+[0;32mI (673824) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (673824) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (673834) ESP32_SSL: switch OK[0m
+[0;32mI (675194) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (676894) ESP32_SSL: Full Response: [0m
+[0;32mI (677504) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (677514) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (677514) ESP32_SSL: switch OK[0m
+[0;32mI (678884) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (680574) ESP32_SSL: Full Response: [0m
+[0;32mI (680984) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (680994) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (680994) ESP32_SSL: switch OK[0m
+[0;32mI (682364) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (684054) ESP32_SSL: Full Response: [0m
+[0;32mI (684474) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (684474) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (684484) ESP32_SSL: switch OK[0m
+[0;32mI (685874) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (687334) ESP32_SSL: Full Response: [0m
+[0;32mI (687754) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (687754) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (687754) ESP32_SSL: switch OK[0m
+[0;32mI (689114) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (690614) ESP32_SSL: Full Response: [0m
+[0;32mI (691024) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (691024) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (691024) ESP32_SSL: switch OK[0m
+[0;32mI (692394) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (693884) ESP32_SSL: Full Response: [0m
+[0;32mI (694304) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (694304) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (694304) ESP32_SSL: switch OK[0m
+[0;32mI (695674) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (697164) ESP32_SSL: Full Response: [0m
+[0;32mI (697574) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (697584) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (697584) ESP32_SSL: switch OK[0m
+[0;32mI (698934) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (700444) ESP32_SSL: Full Response: [0m
+[0;32mI (700854) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (700854) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (700864) ESP32_SSL: switch OK[0m
+[0;32mI (702224) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (703714) ESP32_SSL: Full Response: [0m
+[0;32mI (704134) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (704134) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (704134) ESP32_SSL: switch OK[0m
+[0;32mI (705504) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (706994) ESP32_SSL: Full Response: [0m
+[0;32mI (707414) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (707414) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (707414) ESP32_SSL: switch OK[0m
+[0;32mI (708794) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (710274) ESP32_SSL: Full Response: [0m
+[0;32mI (710684) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (710684) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (710684) ESP32_SSL: switch OK[0m
+[0;32mI (712094) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (713754) ESP32_SSL: Full Response: [0m
+[0;32mI (714164) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (714164) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (714174) ESP32_SSL: switch OK[0m
+[0;32mI (715544) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (717234) ESP32_SSL: Full Response: [0m
+[0;32mI (717644) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (717654) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (717654) ESP32_SSL: switch OK[0m
+[0;32mI (719034) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (720514) ESP32_SSL: Full Response: [0m
+[0;32mI (720924) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (720924) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (720934) ESP32_SSL: switch OK[0m
+[0;32mI (722284) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (723994) ESP32_SSL: Full Response: [0m
+[0;32mI (724404) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (724404) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (724414) ESP32_SSL: switch OK[0m
+[0;32mI (725784) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (727274) ESP32_SSL: Full Response: [0m
+[0;32mI (727684) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (727684) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (727694) ESP32_SSL: switch OK[0m
+[0;32mI (729084) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (730554) ESP32_SSL: Full Response: [0m
+[0;32mI (731174) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (731174) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (731174) ESP32_SSL: switch OK[0m
+[0;32mI (732564) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (734034) ESP32_SSL: Full Response: [0m
+[0;32mI (734444) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (734444) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (734454) ESP32_SSL: switch OK[0m
+[0;32mI (735794) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (737304) ESP32_SSL: Full Response: [0m
+[0;32mI (737724) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (737724) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (737724) ESP32_SSL: switch OK[0m
+[0;32mI (739154) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (740584) ESP32_SSL: Full Response: [0m
+[0;32mI (740994) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (740994) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (741004) ESP32_SSL: switch OK[0m
+[0;32mI (742374) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (743864) ESP32_SSL: Full Response: [0m
+[0;32mI (744274) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (744274) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (744284) ESP32_SSL: switch OK[0m
+[0;32mI (745684) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (747344) ESP32_SSL: Full Response: [0m
+[0;32mI (747764) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (747764) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (747764) ESP32_SSL: switch OK[0m
+[0;32mI (749144) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (750614) ESP32_SSL: Full Response: [0m
+[0;32mI (751034) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (751034) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (751034) ESP32_SSL: switch OK[0m
+[0;32mI (752424) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (753894) ESP32_SSL: Full Response: [0m
+[0;32mI (754314) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (754314) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (754314) ESP32_SSL: switch OK[0m
+[0;32mI (755704) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (757174) ESP32_SSL: Full Response: [0m
+[0;32mI (757584) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-01T14:57:42.323110Z"}][0m
+[0;32mI (757584) ESP32_SSL: Switch state: 0, LED: OFF                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

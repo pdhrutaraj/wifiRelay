@@ -1,0 +1,8 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'obtain_time':
+/home/pi/wifiRelay_2/main/wifiRelay.c:437:5: warning: 'sntp_setoperatingmode' is deprecated: use esp_sntp_setoperatingmode() instead [-Wdeprecated-declarations]
+  437 |     sntp_setoperatingmode(SNTP_OPMODE_POLL);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+In file included from /home/pi/wifiRelay_2/main/wifiRelay.c:16:
+/home/pi/esp32/esp-idf/components/lwip/include/apps/esp_sntp.h:249:6: note: declared here
+  249 | void sntp_setoperatingmode(u8_t operating_mode)
+      |      ^~~~~~~~~~~~~~~~~~~~~
