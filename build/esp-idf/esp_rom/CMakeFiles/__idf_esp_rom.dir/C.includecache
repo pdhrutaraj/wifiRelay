@@ -102,12 +102,6 @@ stdint.h
 hal/uart_ll.h
 /home/pi/esp32/esp-idf/components/esp_rom/include/hal/uart_ll.h
 
-/home/pi/esp32/esp-idf/components/esp_rom/patches/esp_rom_crc.c
-stdint.h
--
-esp_rom_caps.h
-/home/pi/esp32/esp-idf/components/esp_rom/patches/esp_rom_caps.h
-
 /home/pi/esp32/esp-idf/components/esp_rom/patches/esp_rom_efuse.c
 soc/soc.h
 /home/pi/esp32/esp-idf/components/esp_rom/patches/soc/soc.h

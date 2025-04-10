@@ -210,6 +210,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/pi/esp32/esp-idf/tools/cmake/version.cmake"
   "/home/pi/esp32/esp-idf/tools/kconfig_new/confgen.py"
   "/home/pi/esp32/esp-idf/tools/kconfig_new/config.env.in"
+  "../.git/HEAD"
+  "../.git/refs/heads/main"
   "../CMakeLists.txt"
   "CMakeFiles/3.18.4/CMakeASMCompiler.cmake"
   "CMakeFiles/3.18.4/CMakeCCompiler.cmake"
@@ -274,6 +276,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "CMakeFiles/git-data/HEAD"
+  "CMakeFiles/git-data/grabRef.cmake"
+  "CMakeFiles/git-data/head-ref"
   "CMakeFiles/git-data/HEAD"
   "CMakeFiles/git-data/grabRef.cmake"
   "CMakeFiles/git-data/head-ref"

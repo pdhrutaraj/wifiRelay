@@ -1,0 +1,1052 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (779) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (779) wifi:enable tsf[0m
+[0;32mI (779) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (789) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (799) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (799) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (809) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (829) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (849) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (849) wifi:security: WPA2-PSK, phy: bgn, rssi: -26[0m
+[0;32mI (849) wifi:pm start, type: 1[0m
+
+[0;32mI (859) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (859) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (869) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1899) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (1899) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (1899) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (1899) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (1909) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (1909) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (3919) ESP32_SSL: Time synchronized: Thu Apr 10 02:38:00 2025[0m
+
+[0;32mI (5149) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (6699) ESP32_SSL: Full Auth Response: [0m
+[0;32mI (9359) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (9369) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDg1NzQ4NSwiaWF0IjoxNzQ0MjUyNjg1LCJqdGkiOiI5MjUwMDY0NThlODk0N2IxYmQ3MWNhZTI2ZTdmNWE4ZCIsInVzZXJfaWQiOjF9.cdP4IJCDIPOnxWqJWYlnl0x0BSQpDjY_AkJmR4x8hf8","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MDg1LCJpYXQiOjE3NDQyNTI2ODUsImp0aSI6ImI3ZjQ4MjNiYTQ3YjRjOWJiNzViMjM3NTM4OTljZGVkIiwidXNlcl9pZCI6MX0.jPlKHb5Y7BseAk7TIVFXU709iflNkVAOpMQyMDiJvvM"}[0m
+[0;32mI (9399) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MDg1LCJpYXQiOjE3NDQyNTI2ODUsImp0aSI6ImI3ZjQ4MjNiYTQ3YjRjOWJiNzViMjM3NTM4OTljZGVkIiwidXNlcl9pZCI6MX0.jPlKHb5Y7BseAk7TIVFXU709iflNkVAOpMQyMDiJvvM[0m
+[0;32mI (9429) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (9449) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (9449) main_task: Returned from app_main()[0m
+[0;32mI (10609) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (12019) ESP32_SSL: Full Response: [0m
+[0;32mI (12429) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (12439) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (12439) ESP32_SSL: switch OK[0m
+[0;32mI (13629) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (14889) ESP32_SSL: Full Response: [0m
+[0;32mI (15299) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (15299) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (15299) ESP32_SSL: switch OK[0m
+[0;32mI (16469) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (17959) ESP32_SSL: Full Response: [0m
+[0;32mI (18369) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (18369) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (18379) ESP32_SSL: switch OK[0m
+[0;32mI (19569) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (21029) ESP32_SSL: Full Response: [0m
+[0;32mI (21449) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (21449) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (21449) ESP32_SSL: switch OK[0m
+[0;32mI (22649) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (24099) ESP32_SSL: Full Response: [0m
+[0;32mI (24519) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (24519) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (24519) ESP32_SSL: switch OK[0m
+[0;32mI (25749) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27209) ESP32_SSL: Full Response: [0m
+[0;32mI (27589) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (27589) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (27599) ESP32_SSL: switch OK[0m
+[0;32mI (28829) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (30349) ESP32_SSL: Full Response: [0m
+[0;32mI (30869) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (30869) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (30869) ESP32_SSL: switch OK[0m
+[0;32mI (32349) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (33739) ESP32_SSL: Full Response: [0m
+[0;32mI (34229) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (34229) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (34229) ESP32_SSL: switch OK[0m
+[0;32mI (35499) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (36879) ESP32_SSL: Full Response: [0m
+[0;32mI (37419) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (37419) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (37419) ESP32_SSL: switch OK[0m
+[0;32mI (38599) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (40109) ESP32_SSL: Full Response: [0m
+[0;32mI (40499) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (40499) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (40499) ESP32_SSL: switch OK[0m
+[0;32mI (41769) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (43159) ESP32_SSL: Full Response: [0m
+[0;32mI (43559) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (43569) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (43569) ESP32_SSL: switch OK[0m
+[0;32mI (44859) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (46429) ESP32_SSL: Full Response: [0m
+[0;32mI (46839) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (46839) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (46839) ESP32_SSL: switch OK[0m
+[0;32mI (48019) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (49539) ESP32_SSL: Full Response: [0m
+[0;32mI (49919) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (49919) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (49919) ESP32_SSL: switch OK[0m
+[0;32mI (51119) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (52479) ESP32_SSL: Full Response: [0m
+[0;32mI (52999) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (52999) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (52999) ESP32_SSL: switch OK[0m
+[0;32mI (54309) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (56109) ESP32_SSL: Full Response: [0m
+[0;32mI (56479) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (56479) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (56489) ESP32_SSL: switch OK[0m
+[0;32mI (57849) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (59129) ESP32_SSL: Full Response: [0m
+[0;32mI (59539) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (59539) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (59539) ESP32_SSL: switch OK[0m
+[0;32mI (60899) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (62199) ESP32_SSL: Full Response: [0m
+[0;32mI (62609) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (62609) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (62609) ESP32_SSL: switch OK[0m
+[0;32mI (64809) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (66149) ESP32_SSL: Full Response: [0m
+[0;32mI (66529) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (66529) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (66529) ESP32_SSL: switch OK[0m
+[0;32mI (67709) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (68959) ESP32_SSL: Full Response: [0m
+[0;32mI (69369) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (69369) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (69369) ESP32_SSL: switch OK[0m
+[0;32mI (70649) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (72239) ESP32_SSL: Full Response: [0m
+[0;32mI (72639) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (72649) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (72649) ESP32_SSL: switch OK[0m
+[0;32mI (73839) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (75099) ESP32_SSL: Full Response: [0m
+[0;32mI (75509) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (75509) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (75519) ESP32_SSL: switch OK[0m
+[0;32mI (76779) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (78699) ESP32_SSL: Full Response: [0m
+[0;32mI (79289) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (79289) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (79289) ESP32_SSL: switch OK[0m
+[0;32mI (80749) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (82269) ESP32_SSL: Full Response: [0m
+[0;32mI (82709) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (82709) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (82709) ESP32_SSL: switch OK[0m
+[0;32mI (84009) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (85339) ESP32_SSL: Full Response: [0m
+[0;32mI (85749) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (85759) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (85759) ESP32_SSL: switch OK[0m
+[0;32mI (87029) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (89029) ESP32_SSL: Full Response: [0m
+[0;32mI (89439) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (89439) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (89439) ESP32_SSL: switch OK[0m
+[0;32mI (90609) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (91979) ESP32_SSL: Full Response: [0m
+[0;32mI (92509) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (92509) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (92509) ESP32_SSL: switch OK[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (809) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (839) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (839) wifi:enable tsf[0m
+[0;32mI (839) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (839) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (849) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (849) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (859) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (879) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (899) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (899) wifi:security: WPA2-PSK, phy: bgn, rssi: -36[0m
+[0;32mI (909) wifi:pm start, type: 1[0m
+
+[0;32mI (909) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (939) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (939) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1949) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (1949) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (1949) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (1949) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (1959) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (1959) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (3969) ESP32_SSL: Waiting for system time to be set... (2/10)[0m
+[0;32mI (5969) ESP32_SSL: Time synchronized: Thu Apr 10 02:39:38 2025[0m
+
+[0;32mI (7279) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (9349) ESP32_SSL: Full Auth Response: [0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (779) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (779) wifi:enable tsf[0m
+[0;32mI (779) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (779) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (799) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (799) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (809) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (809) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (839) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (839) wifi:security: WPA2-PSK, phy: bgn, rssi: -23[0m
+[0;32mI (839) wifi:pm start, type: 1[0m
+
+[0;32mI (839) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (979) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (979) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1979) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (1979) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (1979) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (1979) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (1989) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (1989) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (3999) ESP32_SSL: Waiting for system time to be set... (2/10)[0m
+[0;32mI (5999) ESP32_SSL: Time synchronized: Thu Apr 10 02:39:50 2025[0m
+
+[0;32mI (7219) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (8999) ESP32_SSL: Full Auth Response: [0m
+[0;32mI (9079) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (11649) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDg1NzU5NSwiaWF0IjoxNzQ0MjUyNzk1LCJqdGkiOiIwZjdhNzM2NTM3NjI0ODNmODlkZWViODExYzE2MmU1OSIsInVzZXJfaWQiOjF9.qbKeYtSjQjUKXNb0bmpqdYbpMKCLs-7FPzvPJATujDo","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MTk1LCJpYXQiOjE3NDQyNTI3OTUsImp0aSI6IjkxZjIwNDU0ZjljNTQ0OGFhYThjNmUzNTA0ODMzMDlhIiwidXNlcl9pZCI6MX0.QjNnEsjR_ouvNqJbTM0kb678KIZoXmOd8DKEBcHuFbQ"}[0m
+[0;32mI (11689) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MTk1LCJpYXQiOjE3NDQyNTI3OTUsImp0aSI6IjkxZjIwNDU0ZjljNTQ0OGFhYThjNmUzNTA0ODMzMDlhIiwidXNlcl9pZCI6MX0.QjNnEsjR_ouvNqJbTM0kb678KIZoXmOd8DKEBcHuFbQ[0m
+[0;32mI (11709) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (11729) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (11729) main_task: Returned from app_main()[0m
+[0;32mI (12899) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (14539) ESP32_SSL: Full Response: [0m
+[0;32mI (15179) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (15179) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (15189) ESP32_SSL: switch OK[0m
+[0;32mI (16389) esp-x509-crt-bundle: Certificate validated[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (540) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (789) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (789) wifi:enable tsf[0m
+[0;32mI (789) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (789) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (889) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (889) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (969) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (989) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1049) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (1049) wifi:security: WPA2-PSK, phy: bgn, rssi: -22[0m
+[0;32mI (1059) wifi:pm start, type: 1[0m
+
+[0;32mI (1059) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1099) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1099) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:0�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (779) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (849) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (859) wifi:enable tsf[0m
+[0;32mI (859) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (859) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (869) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (869) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (879) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (899) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (989) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (989) wifi:security: WPA2-PSK, phy: bgn, rssi: -21[0m
+[0;32mI (989) wifi:pm start, type: 1[0m
+
+[0;32mI (989) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1089) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1089) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2059) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (2059) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (2059) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (2059) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (2069) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (2069) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (4079) ESP32_SSL: Waiting for system time to be set... (2/10)[0m
+[0;32mI (6079) ESP32_SSL: Waiting for system time to be set... (3/10)[0m
+[0;32mI (8079) ESP32_SSL: Time synchronized: Thu Apr 10 02:40:12 2025[0m
+
+[0;32mI (9309) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (11029) ESP32_SSL: Full Auth Response: [0m
+[0;32mI (11199) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (13899) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDg1NzYxOCwiaWF0IjoxNzQ0MjUyODE4LCJqdGkiOiI3N2Y0NTgyZDY5MTk0NDE0YWUzNDNkMDMyYTVlNGRkMCIsInVzZXJfaWQiOjF9.y4pYCmAphv5r_ms9ubHAx72in-UL33OujM1GxYsAixI","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MjE4LCJpYXQiOjE3NDQyNTI4MTgsImp0aSI6ImYzMjMzOTEyYzcyOTQyZTg5MGQwNWNhODhiZTIyMGFjIiwidXNlcl9pZCI6MX0.QOhD4rb_iUOXTtOMfFuIFJX_jnK36GoZ-DB_iUnv0gY"}[0m
+[0;32mI (13939) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MjE4LCJpYXQiOjE3NDQyNTI4MTgsImp0aSI6ImYzMjMzOTEyYzcyOTQyZTg5MGQwNWNhODhiZTIyMGFjIiwidXNlcl9pZCI6MX0.QOhD4rb_iUOXTtOMfFuIFJX_jnK36GoZ-DB_iUnv0gY[0m
+[0;32mI (13959) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (13979) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (13979) main_task: Returned from app_main()[0m
+[0;32mI (15129) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (16559) ESP32_SSL: Full Response: [0m
+[0;32mI (16969) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (16969) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (16979) ESP32_SSL: switch OK[0m
+[0;32mI (18169) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (19499) ESP32_SSL: Full Response: [0m
+[0;32mI (20039) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (20039) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (20049) ESP32_SSL: switch OK[0m
+[0;32mI (21229) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (22699) ESP32_SSL: Full Response: [0m
+[0;32mI (23109) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (23119) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (23119) ESP32_SSL: switch OK[0m
+[0;32mI (24399) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (25769) ESP32_SSL: Full Response: [0m
+[0;32mI (26799) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (26799) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (26799) ESP32_SSL: switch OK[0m
+[0;32mI (27979) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (29259) ESP32_SSL: Full Response: [0m
+[0;32mI (29769) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (29769) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (29769) ESP32_SSL: switch OK[0m
+[0;32mI (30939) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (36639) ESP32_SSL: Full Response: [0m
+[0;32mI (37039) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (37039) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (37039) ESP32_SSL: switch OK[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (689) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (779) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (859) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (859) wifi:enable tsf[0m
+[0;32mI (859) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (859) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (929) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (929) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (939) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (949) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (969) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (969) wifi:security: WPA2-PSK, phy: bgn, rssi: -11[0m
+[0;32mI (969) wifi:pm start, type: 1[0m
+
+[0;32mI (979) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1029) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (1029) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (2009) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (2009) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (2009) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (2009) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (2019) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (2019) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (4029) ESP32_SSL: Time synchronized: Thu Apr 10 02:40:46 2025[0m
+
+[0;32mI (5269) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (7069) ESP32_SSL: Full Auth Response: [0m
+[0;32mI (9739) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (9749) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDg1NzY1MSwiaWF0IjoxNzQ0MjUyODUxLCJqdGkiOiJkYmQ3YzRmYWY5Y2I0ZDY0ODUyZjlmNzlkNmE3OGNkZiIsInVzZXJfaWQiOjF9.6N6RA9rdj9vl7m4GrFRFJY4SEeirrpS9NzPKnCXbd_I","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MjUxLCJpYXQiOjE3NDQyNTI4NTEsImp0aSI6IjcyMjc2MTc4YTZjOTQ2MDI5YTZhYTAwZDZmNDA5MTk3IiwidXNlcl9pZCI6MX0.1pNmaWaztxQQEBYl229TftJOdSkEgdWOlAM6fCFpNlc"}[0m
+[0;32mI (9779) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5MjUxLCJpYXQiOjE3NDQyNTI4NTEsImp0aSI6IjcyMjc2MTc4YTZjOTQ2MDI5YTZhYTAwZDZmNDA5MTk3IiwidXNlcl9pZCI6MX0.1pNmaWaztxQQEBYl229TftJOdSkEgdWOlAM6fCFpNlc[0m
+[0;32mI (9809) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (9819) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (9819) main_task: Returned from app_main()[0m
+[0;32mI (10989) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (12399) ESP32_SSL: Full Response: [0m
+[0;32mI (12809) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (12809) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (12819) ESP32_SSL: switch OK[0m
+[0;32mI (13999) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (15369) ESP32_SSL: Full Response: [0m
+[0;32mI (15889) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (15889) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (15889) ESP32_SSL: switch OK[0m
+[0;32mI (17059) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (18419) ESP32_SSL: Full Response: [0m
+[0;32mI (18959) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (18959) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (18959) ESP32_SSL: switch OK[0m
+[0;32mI (20239) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (21829) ESP32_SSL: Full Response: [0m
+[0;32mI (22229) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (22239) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (22239) ESP32_SSL: switch OK[0m
+[0;32mI (23429) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (24709) ESP32_SSL: Full Response: [0m
+[0;32mI (25119) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (25119) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (25119) ESP32_SSL: switch OK[0m
+[0;32mI (26419) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27899) ESP32_SSL: Full Response: [0m
+[0;32mI (28389) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (28389) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (28389) ESP32_SSL: switch OK[0m
+[0;32mI (29559) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (31059) ESP32_SSL: Full Response: [0m
+[0;32mI (31499) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (31499) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (31499) ESP32_SSL: switch OK[0m
+[0;32mI (32789) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (34379) ESP32_SSL: Full Response: [0m
+[0;32mI (34759) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (34759) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (34759) ESP32_SSL: switch OK[0m
+[0;32mI (36029) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (37599) ESP32_SSL: Full Response: [0m
+[0;32mI (38029) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (38029) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (38039) ESP32_SSL: switch OK[0m
+[0;32mI (39359) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (40879) ESP32_SSL: Full Response: [0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31650h (202320) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041678 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004169c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004567c vaddr=40080000 size=0a99ch ( 43420) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a73bch (684988) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f73e4 vaddr=4008a99c size=0d104h ( 53508) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  c9abcf5c7...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (609) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (649) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (679) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (689) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (699) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (699) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (789) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (819) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (819) wifi:enable tsf[0m
+[0;32mI (819) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (819) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;33mW (3239) WIFI: Retrying connection... Attempt 1/10[0m
+[0;32mI (3249) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3249) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (3259) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (3259) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3299) wifi:connected with Redmi Note 11S, aid = 1, channel 6, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (3299) wifi:security: WPA2-PSK, phy: bgn, rssi: -7[0m
+[0;32mI (3309) wifi:pm start, type: 1[0m
+
+[0;32mI (3309) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3329) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3329) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4359) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (4359) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (4359) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (4359) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (4369) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (4369) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (6389) ESP32_SSL: Time synchronized: Thu Apr 10 02:41:30 2025[0m
+
+[0;32mI (7739) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (9289) ESP32_SSL: Full Auth Response: [0m
+[0;32mI (9379) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (11959) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDg1NzY5NSwiaWF0IjoxNzQ0MjUyODk1LCJqdGkiOiI1ZWIxYzI5ZDNmMWY0MzFjOGE1MDhkNTE3MDMyNWQwYiIsInVzZXJfaWQiOjF9.nMUKFKq_vXrMxaUSdW729b90BXF3HGr1rGSv_M3U6uw","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5Mjk1LCJpYXQiOjE3NDQyNTI4OTUsImp0aSI6IjU5YjcyNTU1NzdjOTQyM2Q4NzRlMjdiZjI5Y2NjODAwIiwidXNlcl9pZCI6MX0.ZQyhB4yuximiBDUr6Q4tzNHfW0tFw5T-zbsXHMHKyXE"}[0m
+[0;32mI (11999) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0MzM5Mjk1LCJpYXQiOjE3NDQyNTI4OTUsImp0aSI6IjU5YjcyNTU1NzdjOTQyM2Q4NzRlMjdiZjI5Y2NjODAwIiwidXNlcl9pZCI6MX0.ZQyhB4yuximiBDUr6Q4tzNHfW0tFw5T-zbsXHMHKyXE[0m
+[0;32mI (12019) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (12039) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (12039) main_task: Returned from app_main()[0m
+[0;32mI (13219) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (14599) ESP32_SSL: Full Response: [0m
+[0;32mI (15019) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (15019) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (15019) ESP32_SSL: switch OK[0m
+[0;32mI (16189) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (17469) ESP32_SSL: Full Response: [0m
+[0;32mI (17879) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (17879) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (17879) ESP32_SSL: switch OK[0m
+[0;32mI (19209) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (20539) ESP32_SSL: Full Response: [0m
+[0;32mI (20949) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (20959) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (20959) ESP32_SSL: switch OK[0m
+[0;32mI (22219) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (24099) ESP32_SSL: Full Response: [0m
+[0;32mI (24639) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (24639) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (24639) ESP32_SSL: switch OK[0m
+[0;32mI (25949) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (27529) ESP32_SSL: Full Response: [0m
+[0;32mI (27909) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (27919) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (27919) ESP32_SSL: switch OK[0m
+[0;32mI (29089) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (30569) ESP32_SSL: Full Response: [0m
+[0;32mI (30989) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (30989) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (30989) ESP32_SSL: switch OK[0m
+[0;32mI (32179) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (33649) ESP32_SSL: Full Response: [0m
+[0;32mI (34369) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (34369) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (34379) ESP32_SSL: switch OK[0m
+[0;32mI (35549) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (37029) ESP32_SSL: Full Response: [0m
+[0;32mI (37549) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (37549) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (37549) ESP32_SSL: switch OK[0m
+[0;32mI (38739) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (40059) ESP32_SSL: Full Response: [0m
+[0;32mI (40609) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (40609) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (40619) ESP32_SSL: switch OK[0m
+[0;32mI (41899) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (43269) ESP32_SSL: Full Response: [0m
+[0;32mI (43689) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (43689) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (43689) ESP32_SSL: switch OK[0m
+[0;32mI (44999) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (46349) ESP32_SSL: Full Response: [0m
+[0;32mI (46759) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (46759) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (46759) ESP32_SSL: switch OK[0m
+[0;32mI (48089) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (49419) ESP32_SSL: Full Response: [0m
+[0;32mI (49829) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (49829) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (49829) ESP32_SSL: switch OK[0m
+[0;32mI (51109) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (52599) ESP32_SSL: Full Response: [0m
+[0;32mI (53109) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (53109) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (53109) ESP32_SSL: switch OK[0m
+[0;32mI (54289) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (55639) ESP32_SSL: Full Response: [0m
+[0;32mI (56029) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T02:34:57.971852Z"}][0m
+[0;32mI (56029) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (56029) ESP32_SSL: switch OK[0m
+[0;32mI (57209) esp-x509-crt-bundle: Certificate validated[0m

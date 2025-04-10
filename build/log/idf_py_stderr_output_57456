@@ -1,0 +1,11 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'setup_page_post_handler':
+/home/pi/wifiRelay_2/main/wifiRelay.c:571:12: error: invalid storage class for function 'from_hex'
+  571 | static int from_hex(char c) {
+      |            ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: At top level:
+/home/pi/wifiRelay_2/main/wifiRelay.c:576:6: warning: 'url_decode' defined but not used [-Wunused-function]
+  576 | void url_decode(char *str) {
+      |      ^~~~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

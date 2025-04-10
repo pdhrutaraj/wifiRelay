@@ -12,16 +12,6 @@ assert.h
 
 /home/pi/esp32/esp-idf/components/esp_common/include/esp_bit_defs.h
 
-/home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/debug_helpers_asm.S
-xtensa/coreasm.h
--
-xtensa/corebits.h
--
-xtensa/config/system.h
--
-xtensa/hal.h
--
-
 /home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_handler.S
 xtensa/coreasm.h
 -
@@ -39,20 +29,6 @@ soc/soc.h
 /home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/soc/soc.h
 soc/dport_reg.h
 /home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/soc/dport_reg.h
-
-/home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/esp_ipc_isr_routines.S
-xtensa/coreasm.h
--
-xtensa/corebits.h
--
-xtensa/config/system.h
--
-xtensa/hal.h
--
-
-/home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/expression_with_stack_asm.S
-xtensa_context.h
--
 
 /home/pi/esp32/esp-idf/components/esp_system/port/arch/xtensa/panic_handler_asm.S
 freertos/xtensa_rtos.h

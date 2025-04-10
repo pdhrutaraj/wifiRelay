@@ -1,0 +1,17 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'switch_task':
+/home/pi/wifiRelay_2/main/wifiRelay.c:388:25: error: expected expression before 'void'
+  388 |         start_webserver(void);
+      |                         ^~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:388:9: error: too many arguments to function 'start_webserver'
+  388 |         start_webserver(void);
+      |         ^~~~~~~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:62:16: note: declared here
+   62 | httpd_handle_t start_webserver(void);
+      |                ^~~~~~~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: At top level:
+/home/pi/wifiRelay_2/main/wifiRelay.c:399:1: error: expected identifier or '(' before '}' token
+  399 | }
+      | ^
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

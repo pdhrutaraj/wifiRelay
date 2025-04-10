@@ -10,16 +10,6 @@
 freertos/xtensa_rtos.h
 /home/pi/esp32/esp-idf/components/esp_gdbstub/src/port/xtensa/freertos/xtensa_rtos.h
 
-/home/pi/esp32/esp-idf/components/esp_gdbstub/src/port/xtensa/xt_debugexception.S
-xtensa/coreasm.h
--
-xtensa/corebits.h
--
-xtensa/config/system.h
--
-xtensa_context.h
-/home/pi/esp32/esp-idf/components/esp_gdbstub/src/port/xtensa/xtensa_context.h
-
 /home/pi/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/xtensa_rtos.h
 xtensa/coreasm.h
 -

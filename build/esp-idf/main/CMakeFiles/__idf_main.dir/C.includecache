@@ -110,6 +110,26 @@ sys/socket.h
 esp_event.h
 /home/pi/esp32/esp-idf/components/esp_http_client/include/esp_event.h
 
+/home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h
+stdio.h
+-
+string.h
+-
+freertos/FreeRTOS.h
+-
+freertos/task.h
+-
+http_parser.h
+-
+sdkconfig.h
+-
+esp_err.h
+-
+esp_event.h
+-
+esp_event_base.h
+-
+
 /home/pi/esp32/esp-idf/components/esp_hw_support/include/esp_cpu.h
 sdkconfig.h
 /home/pi/esp32/esp-idf/components/esp_hw_support/include/sdkconfig.h
@@ -700,6 +720,16 @@ stdint.h
 stdlib.h
 -
 stdbool.h
+-
+
+/home/pi/esp32/esp-idf/components/http_parser/http_parser.h
+sys/types.h
+-
+BaseTsd.h
+-
+stddef.h
+-
+stdint.h
 -
 
 /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.h
@@ -2059,6 +2089,12 @@ time.h
 -
 sys/time.h
 -
+esp_http_server.h
+/home/pi/wifiRelay_2/main/esp_http_server.h
+ctype.h
+-
+esp_timer.h
+/home/pi/wifiRelay_2/main/esp_timer.h
 
 config/sdkconfig.h
 

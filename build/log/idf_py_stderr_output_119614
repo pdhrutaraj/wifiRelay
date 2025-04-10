@@ -1,0 +1,96 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'create_switch':
+/home/pi/wifiRelay_2/main/wifiRelay.c:84:16: error: 'switch_url' undeclared (first use in this function)
+   84 |         .url = switch_url,
+      |                ^~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:84:16: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/wifiRelay_2/main/wifiRelay.c:93:92: error: 'switch_name' undeclared (first use in this function)
+   93 |         snprintf(post_data, sizeof(post_data), "{\"name\": \"%s\", \"state\": \"false\"}", switch_name);
+      |                                                                                            ^~~~~~~~~~~
+In file included from /home/pi/wifiRelay_2/main/wifiRelay.c:5:
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'event_handler':
+/home/pi/wifiRelay_2/main/wifiRelay.c:173:59: error: 'wifi_ssid' undeclared (first use in this function)
+  173 |         ESP_LOGI("WIFI", "SSID: %s, Password Length: %d", wifi_ssid, strlen(wifi_pass));
+      |                                                           ^~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:140:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  140 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:72:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   72 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:173:9: note: in expansion of macro 'ESP_LOGI'
+  173 |         ESP_LOGI("WIFI", "SSID: %s, Password Length: %d", wifi_ssid, strlen(wifi_pass));
+      |         ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:173:77: error: 'wifi_pass' undeclared (first use in this function)
+  173 |         ESP_LOGI("WIFI", "SSID: %s, Password Length: %d", wifi_ssid, strlen(wifi_pass));
+      |                                                                             ^~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:140:137: note: in definition of macro 'ESP_LOG_LEVEL'
+  140 |         if (level==ESP_LOG_ERROR )          { esp_log_write(ESP_LOG_ERROR,      tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                         ^~~~~~~~~~~
+/home/pi/esp32/esp-idf/components/log/include/esp_log.h:72:38: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+   72 | #define ESP_LOGI( tag, format, ... ) ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO,    tag, format, ##__VA_ARGS__)
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:173:9: note: in expansion of macro 'ESP_LOGI'
+  173 |         ESP_LOGI("WIFI", "SSID: %s, Password Length: %d", wifi_ssid, strlen(wifi_pass));
+      |         ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'wifi_init':
+/home/pi/wifiRelay_2/main/wifiRelay.c:200:43: error: 'wifi_ssid' undeclared (first use in this function); did you mean 'wifi_init'?
+  200 |     strncpy((char *)wifi_config.sta.ssid, wifi_ssid, sizeof(wifi_config.sta.ssid) - 1);
+      |                                           ^~~~~~~~~
+      |                                           wifi_init
+/home/pi/wifiRelay_2/main/wifiRelay.c:201:47: error: 'wifi_pass' undeclared (first use in this function)
+  201 |     strncpy((char *)wifi_config.sta.password, wifi_pass, sizeof(wifi_config.sta.password) - 1);
+      |                                               ^~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'get_auth_token':
+/home/pi/wifiRelay_2/main/wifiRelay.c:257:16: error: 'auth_url' undeclared (first use in this function)
+  257 |         .url = auth_url,
+      |                ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:268:92: error: 'api_user' undeclared (first use in this function)
+  268 |     snprintf(post_data, sizeof(post_data), "{\"username\": \"%s\", \"password\": \"%s\"}", api_user, api_pass);
+      |                                                                                            ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:268:102: error: 'api_pass' undeclared (first use in this function)
+  268 |     snprintf(post_data, sizeof(post_data), "{\"username\": \"%s\", \"password\": \"%s\"}", api_user, api_pass);
+      |                                                                                                      ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'fetch_switch_state':
+/home/pi/wifiRelay_2/main/wifiRelay.c:338:16: error: 'switch_url' undeclared (first use in this function)
+  338 |         .url = switch_url,
+      |                ^~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'load_config_from_nvs':
+/home/pi/wifiRelay_2/main/wifiRelay.c:396:22: error: 'wifi_ssid' undeclared (first use in this function); did you mean 'wifi_init'?
+  396 |         len = sizeof(wifi_ssid); nvs_get_str(nvs_handle, "wifi_ssid", wifi_ssid, &len);
+      |                      ^~~~~~~~~
+      |                      wifi_init
+/home/pi/wifiRelay_2/main/wifiRelay.c:397:22: error: 'wifi_pass' undeclared (first use in this function)
+  397 |         len = sizeof(wifi_pass); nvs_get_str(nvs_handle, "wifi_pass", wifi_pass, &len);
+      |                      ^~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:398:22: error: 'api_user' undeclared (first use in this function)
+  398 |         len = sizeof(api_user); nvs_get_str(nvs_handle, "api_user", api_user, &len);
+      |                      ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:399:22: error: 'api_pass' undeclared (first use in this function)
+  399 |         len = sizeof(api_pass); nvs_get_str(nvs_handle, "api_pass", api_pass, &len);
+      |                      ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:400:22: error: 'auth_url' undeclared (first use in this function)
+  400 |         len = sizeof(auth_url); nvs_get_str(nvs_handle, "auth_url", auth_url, &len);
+      |                      ^~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:401:22: error: 'switch_url' undeclared (first use in this function)
+  401 |         len = sizeof(switch_url); nvs_get_str(nvs_handle, "switch_url", switch_url, &len);
+      |                      ^~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:402:22: error: 'switch_name' undeclared (first use in this function); did you mean 'switch_task'?
+  402 |         len = sizeof(switch_name); nvs_get_str(nvs_handle, "switch_name", switch_name, &len);
+      |                      ^~~~~~~~~~~
+      |                      switch_task
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'handle_post':
+/home/pi/wifiRelay_2/main/wifiRelay.c:520:17: error: too many arguments for format [-Werror=format-extra-args]
+  520 |     sscanf(buf, "wifi_ssid=%[^&]&wifi_pass=%[^&]&api_user=%[^&]&api_pass=%[^&]&auth_url=%[^&]&switch_url=&switch_name=%s", wifi_ssid, wifi_pass, api_user, api_pass, auth_url, switch_url,switch_name);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'app_main':
+/home/pi/wifiRelay_2/main/wifiRelay.c:560:16: error: 'wifi_ssid' undeclared (first use in this function); did you mean 'wifi_init'?
+  560 |     if (strlen(wifi_ssid) == 0 || strlen(api_user) == 0) {
+      |                ^~~~~~~~~
+      |                wifi_init
+/home/pi/wifiRelay_2/main/wifiRelay.c:560:42: error: 'api_user' undeclared (first use in this function)
+  560 |     if (strlen(wifi_ssid) == 0 || strlen(api_user) == 0) {
+      |                                          ^~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

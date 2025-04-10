@@ -1,0 +1,26 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'setup_page_post_handler':
+/home/pi/wifiRelay_2/main/wifiRelay.c:568:5: error: unknown type name 'esp_httpd_query_t'
+  568 |     esp_httpd_query_t query = {
+      |     ^~~~~~~~~~~~~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:569:7: error: field name not in record or union initializer
+  569 |       .buf = buf,
+      |       ^
+/home/pi/wifiRelay_2/main/wifiRelay.c:569:7: note: (near initialization for 'query')
+/home/pi/wifiRelay_2/main/wifiRelay.c:569:14: error: initialization of 'int' from 'char *' makes integer from pointer without a cast [-Wint-conversion]
+  569 |       .buf = buf,
+      |              ^~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:569:14: note: (near initialization for 'query')
+/home/pi/wifiRelay_2/main/wifiRelay.c:570:7: error: field name not in record or union initializer
+  570 |       .buf_len = sizeof(buf)
+      |       ^
+/home/pi/wifiRelay_2/main/wifiRelay.c:570:7: note: (near initialization for 'query')
+/home/pi/wifiRelay_2/main/wifiRelay.c:570:18: warning: excess elements in scalar initializer
+  570 |       .buf_len = sizeof(buf)
+      |                  ^~~~~~
+/home/pi/wifiRelay_2/main/wifiRelay.c:570:18: note: (near initialization for 'query')
+/home/pi/wifiRelay_2/main/wifiRelay.c:568:23: warning: unused variable 'query' [-Wunused-variable]
+  568 |     esp_httpd_query_t query = {
+      |                       ^~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

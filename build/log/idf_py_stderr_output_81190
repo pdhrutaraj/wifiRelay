@@ -1,0 +1,20 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'app_main':
+/home/pi/wifiRelay_2/main/wifiRelay.c:777:1: error: unterminated argument list invoking macro "ESP_LOGI"
+  777 | 
+      | ^
+/home/pi/wifiRelay_2/main/wifiRelay.c:758:5: error: 'ESP_LOGI' undeclared (first use in this function); did you mean 'ESP_LOG_MAX'?
+  758 |     ESP_LOGI(TAG,"old config cleared...)";
+      |     ^~~~~~~~
+      |     ESP_LOG_MAX
+/home/pi/wifiRelay_2/main/wifiRelay.c:758:5: note: each undeclared identifier is reported only once for each function it appears in
+/home/pi/wifiRelay_2/main/wifiRelay.c:758:13: error: expected ';' at end of input
+  758 |     ESP_LOGI(TAG,"old config cleared...)";
+      |             ^
+      |             ;
+......
+/home/pi/wifiRelay_2/main/wifiRelay.c:758:5: error: expected declaration or statement at end of input
+  758 |     ESP_LOGI(TAG,"old config cleared...)";
+      |     ^~~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

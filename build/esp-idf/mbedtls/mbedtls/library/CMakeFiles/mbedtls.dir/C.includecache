@@ -2080,12 +2080,6 @@ pk_internal.h
 mbedtls/rsa.h
 /home/pi/esp32/esp-idf/components/mbedtls/mbedtls/library/mbedtls/rsa.h
 
-/home/pi/esp32/esp-idf/components/mbedtls/port/esp_platform_time.c
-mbedtls/build_info.h
-/home/pi/esp32/esp-idf/components/mbedtls/port/mbedtls/build_info.h
-mbedtls/platform_time.h
-/home/pi/esp32/esp-idf/components/mbedtls/port/mbedtls/platform_time.h
-
 /home/pi/esp32/esp-idf/components/mbedtls/port/include/aes/esp_aes.h
 esp_types.h
 /home/pi/esp32/esp-idf/components/mbedtls/port/include/aes/esp_types.h

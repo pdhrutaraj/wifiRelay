@@ -56,10 +56,6 @@ esp_err.h
 extra_partition_subtypes.inc
 /home/pi/esp32/esp-idf/components/esp_partition/include/extra_partition_subtypes.inc
 
-/home/pi/esp32/esp-idf/components/esp_rom/include/esp_rom_crc.h
-stdint.h
--
-
 /home/pi/esp32/esp-idf/components/esp_rom/include/esp_rom_sys.h
 sdkconfig.h
 /home/pi/esp32/esp-idf/components/esp_rom/include/sdkconfig.h
@@ -233,12 +229,6 @@ stddef.h
 -
 inttypes.h
 -
-
-/home/pi/esp32/esp-idf/components/wear_levelling/crc32.cpp
-crc32.h
-/home/pi/esp32/esp-idf/components/wear_levelling/crc32.h
-esp_rom_crc.h
-/home/pi/esp32/esp-idf/components/wear_levelling/esp_rom_crc.h
 
 /home/pi/esp32/esp-idf/components/wear_levelling/crc32.h
 

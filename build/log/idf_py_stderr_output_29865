@@ -1,0 +1,8 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'reset_button_task':
+/home/pi/wifiRelay_2/main/wifiRelay.c:699:27: error: implicit declaration of function 'esp_timer_get_time'; did you mean 'timer_gettime'? [-Wimplicit-function-declaration]
+  699 |             press_start = esp_timer_get_time() / 1000; // in ms
+      |                           ^~~~~~~~~~~~~~~~~~
+      |                           timer_gettime
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

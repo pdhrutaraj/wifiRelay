@@ -1,0 +1,7 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c: In function 'setup_page_post_handler':
+/home/pi/wifiRelay_2/main/wifiRelay.c:552:40: error: implicit declaration of function 'esp_min' [-Wimplicit-function-declaration]
+  552 |     int ret = httpd_req_recv(req, buf, esp_min(req->content_len, sizeof(buf)-1));
+      |                                        ^~~~~~~
+make[2]: *** [esp-idf/main/CMakeFiles/__idf_main.dir/build.make:87: esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj] Error 1
+make[1]: *** [CMakeFiles/Makefile2:6157: esp-idf/main/CMakeFiles/__idf_main.dir/all] Error 2
+make: *** [Makefile:149: all] Error 2

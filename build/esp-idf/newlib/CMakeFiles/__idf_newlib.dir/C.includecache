@@ -808,12 +808,6 @@ sys/lock.h
 sys/reent.h
 -
 
-/home/pi/esp32/esp-idf/components/newlib/src/getentropy.c
-sys/random.h
--
-errno.h
--
-
 /home/pi/esp32/esp-idf/components/newlib/src/heap.c
 string.h
 -
@@ -1077,22 +1071,6 @@ freertos/FreeRTOS.h
 /home/pi/esp32/esp-idf/components/newlib/src/freertos/FreeRTOS.h
 sdkconfig.h
 /home/pi/esp32/esp-idf/components/newlib/src/sdkconfig.h
-
-/home/pi/esp32/esp-idf/components/newlib/src/syscalls.c
-unistd.h
--
-stdlib.h
--
-stdarg.h
--
-reent.h
--
-fcntl.h
--
-errno.h
--
-sys/time.h
--
 
 /home/pi/esp32/esp-idf/components/newlib/src/sysconf.c
 unistd.h

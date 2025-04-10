@@ -16,6 +16,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/c
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_event/include/esp_event.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_event/include/esp_event_base.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_http_client/include/esp_http_client.h
+esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_http_server/include/esp_http_server.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_hw_support/include/esp_cpu.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_hw_support/include/esp_etm.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/esp_hw_support/include/esp_interface.h
@@ -67,6 +68,7 @@ esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/c
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/hal/include/hal/sha_types.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/heap/include/esp_heap_caps.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/heap/include/multi_heap.h
+esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/http_parser/http_parser.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/json/cJSON/cJSON.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log.h
 esp-idf/main/CMakeFiles/__idf_main.dir/wifiRelay.c.obj: /home/pi/esp32/esp-idf/components/log/include/esp_log_buffer.h

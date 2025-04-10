@@ -3868,14 +3868,6 @@ sdkconfig.h
 esp_mem.h
 /home/pi/esp32/esp-idf/components/mbedtls/port/esp_mem.h
 
-/home/pi/esp32/esp-idf/components/mbedtls/port/esp_timing.c
-mbedtls/build_info.h
--
-sys/time.h
--
-mbedtls/timing.h
-/home/pi/esp32/esp-idf/components/mbedtls/port/mbedtls/timing.h
-
 /home/pi/esp32/esp-idf/components/mbedtls/port/include/aes/esp_aes.h
 esp_types.h
 /home/pi/esp32/esp-idf/components/mbedtls/port/include/aes/esp_types.h

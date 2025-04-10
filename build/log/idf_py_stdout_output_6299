@@ -1,0 +1,390 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f880h (194688) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f8a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f8cc vaddr=3ffb0000 size=0074ch (  1868) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2fc4h (667588) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2fec vaddr=3ffb074c size=0388ch ( 14476) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e6880 vaddr=40080000 size=17920h ( 96544) load[0m
+[0;32mI (449) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (468) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (468) app_init: Project name:     wifiRelay[0m
+[0;32mI (472) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Apr  1 2025 16:05:30[0m
+[0;32mI (480) app_init: ELF file SHA256:  128dd19f8...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (494) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (524) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097920 len 000086E0 (33 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) WIFI: Starting SoftAP mode...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400f8745
+file: "/IDF/components/esp_wifi/src/wifi_default.c" line 376
+func: esp_netif_create_default_wifi_ap
+expression: esp_wifi_set_default_wifi_ap_handlers()
+
+abort() was called at PC 0x400897b7 on core 0
+
+
+Backtrace: 0x40081b0d:0x3ffbb7c0 0x400897c1:0x3ffbb7e0 0x40091419:0x3ffbb800 0x400897b7:0x3ffbb870 0x400f8745:0x3ffbb8a0 0x400d9ad7:0x3ffbb8d0 0x400d9c15:0x3ffbba50 0x401712cb:0x3ffbba80 0x4008a265:0x3ffbbab0
+
+
+
+
+ELF file SHA256: 128dd19f8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f880h (194688) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f8a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f8cc vaddr=3ffb0000 size=0074ch (  1868) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2fc4h (667588) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2fec vaddr=3ffb074c size=0388ch ( 14476) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e6880 vaddr=40080000 size=17920h ( 96544) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (468) app_init: Project name:     wifiRelay[0m
+[0;32mI (472) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Apr  1 2025 16:05:30[0m
+[0;32mI (480) app_init: ELF file SHA256:  128dd19f8...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (494) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (524) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097920 len 000086E0 (33 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) WIFI: Starting SoftAP mode...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400f8745
+file: "/IDF/components/esp_wifi/src/wifi_default.c" line 376
+func: esp_netif_create_default_wifi_ap
+expression: esp_wifi_set_default_wifi_ap_handlers()
+
+abort() was called at PC 0x400897b7 on core 0
+
+
+Backtrace: 0x40081b0d:0x3ffbb7c0 0x400897c1:0x3ffbb7e0 0x40091419:0x3ffbb800 0x400897b7:0x3ffbb870 0x400f8745:0x3ffbb8a0 0x400d9ad7:0x3ffbb8d0 0x400d9c15:0x3ffbba50 0x401712cb:0x3ffbba80 0x4008a265:0x3ffbbab0
+
+
+
+
+ELF file SHA256: 128dd19f8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+I (77) boot: End of partition table
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f880h (194688) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f8a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f8cc vaddr=3ffb0000 size=0074ch (  1868) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2fc4h (667588) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2fec vaddr=3ffb074c size=0388ch ( 14476) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e6880 vaddr=40080000 size=17920h ( 96544) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (468) app_init: Project name:     wifiRelay[0m
+[0;32mI (472) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Apr  1 2025 16:05:30[0m
+[0;32mI (480) app_init: ELF file SHA256:  128dd19f8...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (494) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (524) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097920 len 000086E0 (33 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) WIFI: Starting SoftAP mode...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400f8745
+file: "/IDF/components/esp_wifi/src/wifi_default.c" line 376
+func: esp_netif_create_default_wifi_ap
+expression: esp_wifi_set_default_wifi_ap_handlers()
+
+abort() was called at PC 0x400897b7 on core 0
+
+
+Backtrace: 0x40081b0d:0x3ffbb7c0 0x400897c1:0x3ffbb7e0 0x40091419:0x3ffbb800 0x400897b7:0x3ffbb870 0x400f8745:0x3ffbb8a0 0x400d9ad7:0x3ffbb8d0 0x400d9c15:0x3ffbba50 0x401712cb:0x3ffbba80 0x4008a265:0x3ffbbab0
+
+
+
+
+ELF file SHA256: 128dd19f8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f880h (194688) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f8a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f8cc vaddr=3ffb0000 size=0074ch (  1868) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2fc4h (667588) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2fec vaddr=3ffb074c size=0388ch ( 14476) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e6880 vaddr=40080000 size=17920h ( 96544) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (468) app_init: Project name:     wifiRelay[0m
+[0;32mI (472) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Apr  1 2025 16:05:30[0m
+[0;32mI (480) app_init: ELF file SHA256:  128dd19f8...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (494) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (524) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097920 len 000086E0 (33 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) WIFI: Starting SoftAP mode...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400f8745
+file: "/IDF/components/esp_wifi/src/wifi_default.c" line 376
+func: esp_netif_create_default_wifi_ap
+expression: esp_wifi_set_default_wifi_ap_handlers()
+
+abort() was called at PC 0x400897b7 on core 0
+
+
+Backtrace: 0x40081b0d:0x3ffbb7c0 0x400897c1:0x3ffbb7e0 0x40091419:0x3ffbb800 0x400897b7:0x3ffbb870 0x400f8745:0x3ffbb8a0 0x400d9ad7:0x3ffbb8d0 0x400d9c15:0x3ffbba50 0x401712cb:0x3ffbba80 0x4008a265:0x3ffbbab0
+
+
+
+
+ELF file SHA256: 128dd19f8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f880h (194688) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f8a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f8cc vaddr=3ffb0000 size=0074ch (  1868) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2fc4h (667588) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2fec vaddr=3ffb074c size=0388ch ( 14476) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e6880 vaddr=40080000 size=17920h ( 96544) load[0m
+[0;32mI (448) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (449) boot: Disabling RNG early entropy source...[0m
+[0;32mI (459) cpu_start: Multicore app[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (468) app_init: Application information:[0m
+[0;32mI (468) app_init: Project name:     wifiRelay[0m
+[0;32mI (472) app_init: App version:      1[0m
+[0;32mI (475) app_init: Compile time:     Apr  1 2025 16:05:30[0m
+[0;32mI (480) app_init: ELF file SHA256:  128dd19f8...[0m
+[0;32mI (484) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (490) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (494) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (498) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (502) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (508) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (513) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (524) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (529) heap_init: At 40097920 len 000086E0 (33 KiB): IRAM[0m
+[0;32mI (536) spi_flash: detected chip: generic[0m
+[0;32mI (538) spi_flash: flash io: dio[0m
+[0;33mW (541) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (554) main_task: Started on CPU0[0m
+[0;32mI (564) main_task: Calling app_main()[0m
+[0;32mI (604) WIFI: Starting SoftAP mode...[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x103 (ESP_ERR_INVALID_STATE) at 0x400f8745
+file: "/IDF/components/esp_wifi/src/wifi_default.c" line 376
+func: esp_netif_create_default_wifi_ap
+expression: esp_wifi_set_default_wifi_ap_handlers()
+
+abort() was called at PC 0x400897b7 on core 0
+
+
+Backtrace: 0x40081b0d:0x3ffbb7c0 0x400897c1:0x3ffbb7e0 0x40091419:0x3ffbb800 0x400897b7:0x3ffbb870 0x400f8745:0x3ffbb8a0 0x400d9ad7:0x3ffbb8d0 0x400d9c15:0x3ffbba50 0x401712cb:0x3ffbba80 0x4008a265:0x3ffbbab0
+
+
+
+
+ELF file SHA256: 128dd19f8
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2f880h (194688) map[0m
+[0;32mI (154) esp_image: segment 1: paddr=0003f8a8 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (155) esp_image: segment 2: paddr=0003f8cc vaddr=3ffb0000 size=0074ch (  1868) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a2fc4h (667588) map[0m
+[0;32mI (394) esp_image: segment 4: paddr=000e2fec vaddr=3ffb074c size=0388ch ( 14476) load[0m
+[0;32mI (399) esp_image: segment 5: paddr=000e6880 vaddr=40080000 size=17920h ( 96544) load[0m

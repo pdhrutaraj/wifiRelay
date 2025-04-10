@@ -16,12 +16,6 @@ sdkconfig.h
 
 /home/pi/esp32/esp-idf/components/esp_common/include/esp_bit_defs.h
 
-/home/pi/esp32/esp-idf/components/esp_rom/include/esp_rom_lldesc.h
-stdint.h
--
-sys/queue.h
-/home/pi/esp32/esp-idf/components/esp_rom/include/sys/queue.h
-
 /home/pi/esp32/esp-idf/components/newlib/platform_include/assert.h
 sdkconfig.h
 -
@@ -142,15 +136,9 @@ soc/sdmmc_pins.h
 
 /home/pi/esp32/esp-idf/components/soc/esp32/include/soc/spi_pins.h
 
-/home/pi/esp32/esp-idf/components/soc/esp32/include/soc/touch_sensor_channel.h
-
 /home/pi/esp32/esp-idf/components/soc/esp32/include/soc/uart_pins.h
 soc/io_mux_reg.h
 /home/pi/esp32/esp-idf/components/soc/esp32/include/soc/soc/io_mux_reg.h
-
-/home/pi/esp32/esp-idf/components/soc/esp32/interrupts.c
-soc/interrupts.h
-/home/pi/esp32/esp-idf/components/soc/esp32/soc/interrupts.h
 
 /home/pi/esp32/esp-idf/components/soc/esp32/lcd_periph.c
 soc/soc.h
@@ -336,10 +324,6 @@ soc/soc.h
 soc/timer_periph.h
 /home/pi/esp32/esp-idf/components/soc/esp32/soc/timer_periph.h
 
-/home/pi/esp32/esp-idf/components/soc/esp32/touch_sensor_periph.c
-soc/touch_sensor_channel.h
-/home/pi/esp32/esp-idf/components/soc/esp32/soc/touch_sensor_channel.h
-
 /home/pi/esp32/esp-idf/components/soc/esp32/twai_periph.c
 soc/soc.h
 /home/pi/esp32/esp-idf/components/soc/esp32/soc/soc.h
@@ -441,12 +425,6 @@ soc/regdma.h
 /home/pi/esp32/esp-idf/components/soc/include/soc/soc/regdma.h
 soc/retention_periph_defs.h
 /home/pi/esp32/esp-idf/components/soc/include/soc/soc/retention_periph_defs.h
-
-/home/pi/esp32/esp-idf/components/soc/include/soc/lldesc.h
-stdbool.h
--
-esp_rom_lldesc.h
-/home/pi/esp32/esp-idf/components/soc/include/soc/esp_rom_lldesc.h
 
 /home/pi/esp32/esp-idf/components/soc/include/soc/mcpwm_periph.h
 stdint.h
@@ -717,10 +695,6 @@ soc/periph_defs.h
 /home/pi/esp32/esp-idf/components/soc/include/soc/soc/periph_defs.h
 soc/regdma.h
 /home/pi/esp32/esp-idf/components/soc/include/soc/soc/regdma.h
-
-/home/pi/esp32/esp-idf/components/soc/lldesc.c
-soc/lldesc.h
-/home/pi/esp32/esp-idf/components/soc/soc/lldesc.h
 
 config/sdkconfig.h
 

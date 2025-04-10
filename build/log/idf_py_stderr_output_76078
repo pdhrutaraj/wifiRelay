@@ -1,0 +1,3 @@
+/home/pi/wifiRelay_2/main/wifiRelay.c:652:23: warning: 'reset_button_isr_handler' defined but not used [-Wunused-function]
+  652 | static void IRAM_ATTR reset_button_isr_handler(void* arg) {
+      |                       ^~~~~~~~~~~~~~~~~~~~~~~~

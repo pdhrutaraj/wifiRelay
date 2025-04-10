@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "wifiRelay",
-    "project_version":    "1",
+    "project_version":    "e236b10-dirty",
     "project_path":       "/home/pi/wifiRelay_2",
     "idf_path":           "/home/pi/esp32/esp-idf",
     "build_dir":          "/home/pi/wifiRelay_2/build",

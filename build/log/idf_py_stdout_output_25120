@@ -1,0 +1,523 @@
+689) wifi_init: accept mbox: 6
+[0;32mI (689) wifi_init: tcpip mbox: 32[0m
+[0;32mI (699) �ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6328
+load:0x40078000,len:15828
+load:0x40080400,len:3860
+entry 0x40080638
+[0;32mI (27) boot: ESP-IDF v5.5-dev-1050-gb5ac4fbdf9 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Apr  1 2025 16:03:06[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (30) boot: chip revision: v3.1[0m
+[0;32mI (33) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=31710h (202512) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00041738 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (157) esp_image: segment 2: paddr=0004175c vaddr=3ffb0000 size=03fd8h ( 16344) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=0004573c vaddr=40080000 size=0a8dch ( 43228) load[0m
+[0;32mI (185) esp_image: segment 4: paddr=00050020 vaddr=400d0020 size=a7460h (685152) map[0m
+[0;32mI (420) esp_image: segment 5: paddr=000f7488 vaddr=4008a8dc size=0d1c4h ( 53700) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (471) app_init: Application information:[0m
+[0;32mI (471) app_init: Project name:     wifiRelay[0m
+[0;32mI (475) app_init: App version:      e236b10-dirty[0m
+[0;32mI (480) app_init: Compile time:     Apr  7 2025 05:38:01[0m
+[0;32mI (485) app_init: ELF file SHA256:  2646a2aaf...[0m
+[0;32mI (489) app_init: ESP-IDF:          v5.5-dev-1050-gb5ac4fbdf9[0m
+[0;32mI (495) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (507) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (513) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (518) heap_init: At 3FFB9780 len 00026880 (154 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (534) heap_init: At 40097AA0 len 00008560 (33 KiB): IRAM[0m
+[0;32mI (541) spi_flash: detected chip: generic[0m
+[0;32mI (543) spi_flash: flash io: dio[0m
+[0;33mW (546) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (559) main_task: Started on CPU0[0m
+[0;32mI (569) main_task: Calling app_main()[0m
+[0;32mI (599) ESP32_SSL: api_user : admin[0m
+[0;32mI (599) ESP32_SSL: api_pass : admin[0m
+[0;32mI (599) ESP32_SSL: wifi_ssid : Redmi Note 11S[0m
+[0;32mI (599) ESP32_SSL: widi_pass : Patientpay2015[0m
+[0;32mI (609) ESP32_SSL: auth_url : https://eapi-vijn.onrender.com/api/token[0m
+[0;32mI (609) ESP32_SSL: switch_url : https://eapi-vijn.onrender.com/api/switches[0m
+[0;32mI (619) ESP32_SSL: switch_name : switch_1[0m
+[0;32mI (619) ESP32_SSL: Initializing Wi-Fi...[0m
+[0;32mI (639) wifi:wifi driver task: 3ffc17c0, prio:23, stack:6656, core=0[0m
+[0;32mI (649) wifi:wifi firmware version: 34d97ea27[0m
+[0;32mI (649) wifi:wifi certification version: v7.0[0m
+[0;32mI (649) wifi:config NVS flash: enabled[0m
+[0;32mI (649) wifi:config nano formatting: disabled[0m
+[0;32mI (659) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (659) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (669) wifi:Init management short buffer num: 32[0m
+[0;32mI (669) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (679) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (679) wifi:Init static rx buffer num: 10[0m
+[0;32mI (679) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (689) wifi_init: rx ba win: 6[0m
+[0;32mI (689) wifi_init: accept mbox: 6[0m
+[0;32mI (689) wifi_init: tcpip mbox: 32[0m
+[0;32mI (699) wifi_init: udp mbox: 6[0m
+[0;32mI (699) wifi_init: tcp mbox: 6[0m
+[0;32mI (699) wifi_init: tcp tx win: 5760[0m
+[0;32mI (709) wifi_init: tcp rx win: 5760[0m
+[0;32mI (709) wifi_init: tcp mss: 1440[0m
+[0;32mI (709) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (719) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (719) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (799) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (819) wifi:mode : sta (08:b6:1f:b8:35:2c)[0m
+[0;32mI (829) wifi:enable tsf[0m
+[0;32mI (829) ESP32_SSL: Wi-Fi setup complete. Waiting for connection...[0m
+[0;32mI (829) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (839) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (839) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (849) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (869) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (889) wifi:connected with Redmi Note 11S, aid = 3, channel 1, BW20, bssid = 9a:db:b3:12:49:9f[0m
+[0;32mI (889) wifi:security: WPA2-PSK, phy: bgn, rssi: -49[0m
+[0;32mI (889) wifi:pm start, type: 1[0m
+
+[0;32mI (889) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (919) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (919) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (1929) esp_netif_handlers: sta ip: 192.168.208.246, mask: 255.255.255.0, gw: 192.168.208.107[0m
+[0;32mI (1929) WIFI: SSID: Redmi Note 11S, Password Length: 14[0m
+[0;32mI (1929) WIFI: Connected! IP Address: 192.168.208.246[0m
+[0;33mW (1929) ESP32_SSL: Time not set! Syncing with NTP...[0m
+[0;32mI (1939) ESP32_SSL: Initializing SNTP...[0m
+[0;32mI (1939) ESP32_SSL: Waiting for system time to be set... (1/10)[0m
+[0;32mI (3949) ESP32_SSL: Waiting for system time to be set... (2/10)[0m
+[0;32mI (5949) ESP32_SSL: Waiting for system time to be set... (3/10)[0m
+[0;32mI (7949) ESP32_SSL: Time synchronized: Thu Apr 10 16:12:17 2025[0m
+
+[0;32mI (9209) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (10859) ESP32_SSL: Full Auth Response: [0m
+[0;32mI (13519) wifi:<ba-add>idx:0 (ifx:0, 9a:db:b3:12:49:9f), tid:4, ssn:16, winSize:64[0m
+[0;32mI (13529) ESP32_SSL: Full Auth Response: {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NDkwNjM0MiwiaWF0IjoxNzQ0MzAxNTQyLCJqdGkiOiJjN2ViN2MxODJhN2M0NmRkOTIxOGQ1MGU5ZmE1MzM3NiIsInVzZXJfaWQiOjF9.z_9f9hxSBzKxfPehwvO45HQ5X26h3kpmxeD6XKsrI0c","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0Mzg3OTQyLCJpYXQiOjE3NDQzMDE1NDIsImp0aSI6IjQyZGJlMGE1ZjdkMTRkNjJiNjUwZjg3YWMzZmY2OTM3IiwidXNlcl9pZCI6MX0.PJj14b7hzEJJ72nZib2yqGXdOMVL0Y3u1GZtjeWTbSk"}[0m
+[0;32mI (13569) ESP32_SSL: saving Auth Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ0Mzg3OTQyLCJpYXQiOjE3NDQzMDE1NDIsImp0aSI6IjQyZGJlMGE1ZjdkMTRkNjJiNjUwZjg3YWMzZmY2OTM3IiwidXNlcl9pZCI6MX0.PJj14b7hzEJJ72nZib2yqGXdOMVL0Y3u1GZtjeWTbSk[0m
+[0;32mI (13589) ESP32_SSL: Authentication succesful ...[0m
+[0;32mI (13609) gpio: GPIO[0]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (13609) main_task: Returned from app_main()[0m
+[0;32mI (14779) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (16599) ESP32_SSL: Full Response: [0m
+[0;32mI (17009) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (17009) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (17009) ESP32_SSL: switch OK[0m
+[0;32mI (18219) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (19469) ESP32_SSL: Full Response: [0m
+[0;32mI (19879) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (19879) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (19879) ESP32_SSL: switch OK[0m
+[0;32mI (21069) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (22329) ESP32_SSL: Full Response: [0m
+[0;32mI (22739) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (22739) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (22749) ESP32_SSL: switch OK[0m
+[0;32mI (23919) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (25199) ESP32_SSL: Full Response: [0m
+[0;32mI (25669) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (25679) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (25679) ESP32_SSL: switch OK[0m
+[0;32mI (26969) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (28969) ESP32_SSL: Full Response: [0m
+[0;32mI (29419) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (29419) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (29419) ESP32_SSL: switch OK[0m
+[0;32mI (30829) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (32159) ESP32_SSL: Full Response: [0m
+[0;32mI (32689) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (32689) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (32689) ESP32_SSL: switch OK[0m
+[0;32mI (33899) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (35339) ESP32_SSL: Full Response: [0m
+[0;32mI (35849) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (35849) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (35859) ESP32_SSL: switch OK[0m
+[0;32mI (37049) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (38419) ESP32_SSL: Full Response: [0m
+[0;32mI (38929) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (38929) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (38929) ESP32_SSL: switch OK[0m
+[0;32mI (40099) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (41419) ESP32_SSL: Full Response: [0m
+[0;32mI (41809) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (41809) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (41809) ESP32_SSL: switch OK[0m
+[0;32mI (42989) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (44859) ESP32_SSL: Full Response: [0m
+[0;32mI (45269) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (45269) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (45279) ESP32_SSL: switch OK[0m
+[0;32mI (46479) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (47729) ESP32_SSL: Full Response: [0m
+[0;32mI (48139) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (48149) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (48149) ESP32_SSL: switch OK[0m
+[0;32mI (49409) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (51299) ESP32_SSL: Full Response: [0m
+[0;32mI (51829) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (51829) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (51829) ESP32_SSL: switch OK[0m
+[0;32mI (53039) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (54489) ESP32_SSL: Full Response: [0m
+[0;32mI (54899) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (54899) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (54909) ESP32_SSL: switch OK[0m
+[0;32mI (56099) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (57349) ESP32_SSL: Full Response: [0m
+[0;32mI (57769) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (57769) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (57769) ESP32_SSL: switch OK[0m
+[0;32mI (58959) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (60219) ESP32_SSL: Full Response: [0m
+[0;32mI (60629) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (60629) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (60639) ESP32_SSL: switch OK[0m
+[0;32mI (61819) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (63089) ESP32_SSL: Full Response: [0m
+[0;32mI (63499) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (63499) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (63499) ESP32_SSL: switch OK[0m
+[0;32mI (64689) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (65959) ESP32_SSL: Full Response: [0m
+[0;32mI (66369) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (66369) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (66369) ESP32_SSL: switch OK[0m
+[0;32mI (67569) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (69029) ESP32_SSL: Full Response: [0m
+[0;32mI (69439) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (69439) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (69439) ESP32_SSL: switch OK[0m
+[0;32mI (70619) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (71889) ESP32_SSL: Full Response: [0m
+[0;32mI (72309) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (72309) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (72309) ESP32_SSL: switch OK[0m
+[0;32mI (73509) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (74759) ESP32_SSL: Full Response: [0m
+[0;32mI (75169) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (75179) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (75179) ESP32_SSL: switch OK[0m
+[0;32mI (76369) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (77629) ESP32_SSL: Full Response: [0m
+[0;32mI (78039) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (78039) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (78049) ESP32_SSL: switch OK[0m
+[0;32mI (79339) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (80699) ESP32_SSL: Full Response: [0m
+[0;32mI (81109) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (81109) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (81119) ESP32_SSL: switch OK[0m
+[0;32mI (82329) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (83769) ESP32_SSL: Full Response: [0m
+[0;32mI (84179) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (84189) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (84189) ESP32_SSL: switch OK[0m
+[0;32mI (85369) esp-x509-crt-bundle: Certificate validated[0m
+Button pressed!
+Button released. Duration: 150 ms
+[0;32mI (86639) ESP32_SSL: Full Response: [0m
+[0;32mI (87049) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (87049) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (87059) ESP32_SSL: switch OK[0m
+[0;32mI (88239) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (89509) ESP32_SSL: Full Response: [0m
+[0;32mI (89919) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (89919) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (89919) ESP32_SSL: switch OK[0m
+[0;32mI (91099) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (92579) ESP32_SSL: Full Response: [0m
+[0;32mI (92989) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (92989) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (92999) ESP32_SSL: switch OK[0m
+[0;32mI (94169) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (95449) ESP32_SSL: Full Response: [0m
+[0;32mI (95859) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (95859) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (95859) ESP32_SSL: switch OK[0m
+[0;32mI (97039) esp-x509-crt-bundle: Certificate validated[0m
+Button pressed!
+Button released. Duration: 150 ms
+[0;32mI (98309) ESP32_SSL: Full Response: [0m
+[0;32mI (98729) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (98729) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (98729) ESP32_SSL: switch OK[0m
+[0;32mI (99919) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (101179) ESP32_SSL: Full Response: [0m
+Button pressed!
+[0;32mI (101589) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (101589) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (101599) ESP32_SSL: switch OK[0m
+[0;32mI (102779) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (104049) ESP32_SSL: Full Response: [0m
+[0;32mI (104459) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (104459) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (104469) ESP32_SSL: switch OK[0m
+Button released. Duration: 4100 ms
+[0;32mI (105649) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (106919) ESP32_SSL: Full Response: [0m
+Button pressed!
+[0;32mI (107329) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (107329) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (107339) ESP32_SSL: switch OK[0m
+Button released. Duration: 250 ms
+Button pressed!
+[0;32mI (108519) esp-x509-crt-bundle: Certificate validated[0m
+Button released. Duration: 150 ms
+Button pressed!
+Button released. Duration: 149 ms
+[0;32mI (109989) ESP32_SSL: Full Response: [0m
+[0;32mI (110599) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+Button pressed!
+[0;32mI (110609) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (110609) ESP32_SSL: switch OK[0m
+Button released. Duration: 100 ms
+[0;32mI (111799) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (113259) ESP32_SSL: Full Response: [0m
+[0;32mI (113679) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (113679) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (113679) ESP32_SSL: switch OK[0m
+[0;32mI (114869) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (116339) ESP32_SSL: Full Response: [0m
+[0;32mI (116959) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (116959) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (116959) ESP32_SSL: switch OK[0m
+[0;32mI (118149) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (119409) ESP32_SSL: Full Response: [0m
+[0;32mI (119819) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (119819) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (119829) ESP32_SSL: switch OK[0m
+[0;32mI (121009) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (122279) ESP32_SSL: Full Response: [0m
+[0;32mI (122689) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (122689) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (122689) ESP32_SSL: switch OK[0m
+[0;32mI (123889) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (125139) ESP32_SSL: Full Response: [0m
+[0;32mI (125559) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (125559) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (125559) ESP32_SSL: switch OK[0m
+[0;32mI (126749) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (128219) ESP32_SSL: Full Response: [0m
+[0;32mI (128629) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (128629) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (128639) ESP32_SSL: switch OK[0m
+[0;32mI (129909) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (131309) ESP32_SSL: Full Response: [0m
+[0;32mI (131769) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (131769) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (131769) ESP32_SSL: switch OK[0m
+[0;32mI (133279) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (134619) ESP32_SSL: Full Response: [0m
+[0;32mI (135049) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (135049) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (135049) ESP32_SSL: switch OK[0m
+[0;32mI (136289) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (137639) ESP32_SSL: Full Response: [0m
+[0;32mI (138049) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (138049) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (138049) ESP32_SSL: switch OK[0m
+[0;32mI (139239) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (140709) ESP32_SSL: Full Response: [0m
+[0;32mI (141059) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (141059) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (141059) ESP32_SSL: switch OK[0m
+[0;32mI (142249) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (143579) ESP32_SSL: Full Response: [0m
+[0;32mI (144089) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (144089) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (144089) ESP32_SSL: switch OK[0m
+[0;32mI (145279) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (146779) ESP32_SSL: Full Response: [0m
+[0;32mI (147269) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (147269) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (147269) ESP32_SSL: switch OK[0m
+[0;32mI (148459) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (149799) ESP32_SSL: Full Response: [0m
+[0;32mI (150169) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (150169) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (150179) ESP32_SSL: switch OK[0m
+[0;32mI (151369) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (152999) ESP32_SSL: Full Response: [0m
+[0;32mI (153409) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (153409) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (153419) ESP32_SSL: switch OK[0m
+[0;32mI (154669) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (156069) ESP32_SSL: Full Response: [0m
+[0;32mI (156479) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (156479) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (156489) ESP32_SSL: switch OK[0m
+[0;32mI (157769) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (159139) ESP32_SSL: Full Response: [0m
+[0;32mI (159549) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (159549) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (159559) ESP32_SSL: switch OK[0m
+[0;32mI (160859) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (162329) ESP32_SSL: Full Response: [0m
+[0;32mI (163239) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (163249) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (163249) ESP32_SSL: switch OK[0m
+[0;32mI (164429) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (165749) ESP32_SSL: Full Response: [0m
+[0;32mI (166129) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (166139) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (166139) ESP32_SSL: switch OK[0m
+[0;32mI (167309) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (168559) ESP32_SSL: Full Response: [0m
+[0;32mI (168979) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (168979) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (168979) ESP32_SSL: switch OK[0m
+[0;32mI (170249) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (171839) ESP32_SSL: Full Response: [0m
+[0;32mI (172249) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (172249) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (172259) ESP32_SSL: switch OK[0m
+[0;32mI (173449) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (174709) ESP32_SSL: Full Response: [0m
+[0;32mI (175119) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (175119) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (175119) ESP32_SSL: switch OK[0m
+[0;32mI (176389) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (177779) ESP32_SSL: Full Response: [0m
+[0;32mI (178299) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (178299) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (178309) ESP32_SSL: switch OK[0m
+[0;32mI (179489) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (181059) ESP32_SSL: Full Response: [0m
+[0;32mI (181469) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (181469) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (181479) ESP32_SSL: switch OK[0m
+[0;32mI (182659) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (184369) ESP32_SSL: Full Response: [0m
+[0;32mI (184749) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (184749) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (184749) ESP32_SSL: switch OK[0m
+[0;32mI (185959) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (187419) ESP32_SSL: Full Response: [0m
+[0;32mI (187819) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":true,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (187819) ESP32_SSL: Switch state: 1, LED: ON[0m
+[0;32mI (187819) ESP32_SSL: switch OK[0m
+[0;32mI (188999) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (190269) ESP32_SSL: Full Response: [0m
+[0;32mI (190679) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (190679) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (190689) ESP32_SSL: switch OK[0m
+[0;32mI (191939) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (193339) ESP32_SSL: Full Response: [0m
+[0;32mI (193759) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (193769) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (193769) ESP32_SSL: switch OK[0m
+[0;32mI (195049) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (196629) ESP32_SSL: Full Response: [0m
+[0;32mI (197039) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (197039) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (197039) ESP32_SSL: switch OK[0m
+Button pressed!
+Button released. Duration: 150 ms
+[0;32mI (198249) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (199689) ESP32_SSL: Full Response: [0m
+[0;32mI (200109) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (200109) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (200109) ESP32_SSL: switch OK[0m
+[0;32mI (201299) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (202559) ESP32_SSL: Full Response: [0m
+[0;32mI (202969) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (202969) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (202979) ESP32_SSL: switch OK[0m
+[0;32mI (204169) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (205429) ESP32_SSL: Full Response: [0m
+[0;32mI (205839) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (205839) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (205839) ESP32_SSL: switch OK[0m
+[0;32mI (207029) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (208499) ESP32_SSL: Full Response: [0m
+[0;32mI (208909) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (208919) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (208919) ESP32_SSL: switch OK[0m
+[0;32mI (210199) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (211779) ESP32_SSL: Full Response: [0m
+[0;32mI (212189) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (212189) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (212199) ESP32_SSL: switch OK[0m
+[0;32mI (213379) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (214639) ESP32_SSL: Full Response: [0m
+[0;32mI (215059) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (215059) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (215059) ESP32_SSL: switch OK[0m
+[0;32mI (216259) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (217509) ESP32_SSL: Full Response: [0m
+[0;32mI (217919) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (217919) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (217929) ESP32_SSL: switch OK[0m
+[0;32mI (219109) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (220379) ESP32_SSL: Full Response: [0m
+[0;32mI (220789) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (220789) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (220799) ESP32_SSL: switch OK[0m
+[0;32mI (221999) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (223239) ESP32_SSL: Full Response: [0m
+[0;32mI (223659) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (223659) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (223669) ESP32_SSL: switch OK[0m
+[0;32mI (224859) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (226109) ESP32_SSL: Full Response: [0m
+[0;32mI (226519) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (226529) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (226529) ESP32_SSL: switch OK[0m
+[0;32mI (227699) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (229179) ESP32_SSL: Full Response: [0m
+[0;32mI (229599) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (229599) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (229599) ESP32_SSL: switch OK[0m
+[0;32mI (230789) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (232259) ESP32_SSL: Full Response: [0m
+[0;32mI (232669) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (232669) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (232679) ESP32_SSL: switch OK[0m
+[0;32mI (233859) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (235119) ESP32_SSL: Full Response: [0m
+[0;32mI (235539) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (235539) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (235539) ESP32_SSL: switch OK[0m
+[0;32mI (236719) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (237989) ESP32_SSL: Full Response: [0m
+[0;32mI (238409) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (238409) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (238409) ESP32_SSL: switch OK[0m
+[0;32mI (239589) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (240829) ESP32_SSL: Full Response: [0m
+[0;32mI (241269) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (241269) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (241269) ESP32_SSL: switch OK[0m
+[0;32mI (242459) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (243729) ESP32_SSL: Full Response: [0m
+[0;32mI (244139) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (244139) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (244139) ESP32_SSL: switch OK[0m
+[0;32mI (245329) esp-x509-crt-bundle: Certificate validated[0m
+[0;32mI (246799) ESP32_SSL: Full Response: [0m
+[0;32mI (247209) ESP32_SSL: Full Response: [{"id":1,"name":"switch_1","state":false,"created_at":"2025-04-10T16:03:11.817032Z"}][0m
+[0;32mI (247209) ESP32_SSL: Switch state: 0, LED: OFF[0m
+[0;32mI (247219) ESP32_SSL: switch OK[0m

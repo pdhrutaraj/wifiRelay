@@ -16,6 +16,9 @@
 #include "esp_sntp.h"
 #include <time.h>
 #include <sys/time.h>
+#include "esp_http_server.h"
+#include <ctype.h>
+#include "esp_timer.h"
 
 #define LED_GPIO GPIO_NUM_2
 #define WIFI_RETRY_MAX 10
@@ -30,6 +33,7 @@
 
 static char auth_token[512] = {0};
 static const char *TAG = "ESP32_SSL";
+
 static char wifi_ssid[WIFI_SSID_MAX_LEN] = {0};
 static char wifi_pass[WIFI_PASS_MAX_LEN] = {0};
 static char api_user[USER_MAX_LEN] = {0};
@@ -49,7 +53,33 @@ static EventGroupHandle_t wifi_event_group;
 const int WIFI_CONNECTED_BIT = BIT0;
 static int retry_num = 0;
 
+#ifndef MIN
+#define MIN(a, b) ((a) < (b) ? (a) : (b))
+#endif
+
+
 void esp_sntp_init(void);
+void start_wifi_ap();
+httpd_handle_t start_webserver(void);
+//erase nvs
+//#include "nvs_flash.h"
+//#include "esp_wifi.h"
+
+void clear_wifi_credentials() {
+    nvs_flash_init();
+    nvs_handle_t nvs_handle;
+    esp_err_t err = nvs_open("storage", NVS_READWRITE, &nvs_handle);
+    if (err == ESP_OK) {
+        nvs_erase_all(nvs_handle);  // Wipe all keys in "wifi_config"
+        nvs_commit(nvs_handle);
+        nvs_close(nvs_handle);
+    }
+
+    // Optionally clear WiFi stack config
+    esp_wifi_restore();
+}
+
+//
 // Function to create a new switch via POST request
 // HTTP event handler to capture server responses
 esp_err_t http_event_handler_2(esp_http_client_event_t *evt) {
@@ -305,7 +335,10 @@ esp_err_t _http_event_handler_1(esp_http_client_event_t *evt) {
             // Check if the response is an array
             if (cJSON_IsArray(json)) {
                 // Get the first object in the array
+		// how to get id ?
                 cJSON *first_item = cJSON_GetArrayItem(json, 0);
+		//get id before state
+		//if 
                 if (first_item) {
                     // Extract the "state" field
                     cJSON *state = cJSON_GetObjectItem(first_item, "state");
@@ -313,6 +346,7 @@ esp_err_t _http_event_handler_1(esp_http_client_event_t *evt) {
                         bool switch_state = cJSON_IsTrue(state);
                         gpio_set_level(LED_GPIO, switch_state);
                         ESP_LOGI(TAG, "Switch state: %d, LED: %s", switch_state, switch_state ? "ON" : "OFF");
+
                     }
 		   }
 	    }
@@ -347,6 +381,9 @@ void fetch_switch_state() {
     esp_err_t err = esp_http_client_perform(client);
     if (err == ESP_OK) {
                 ESP_LOGI(TAG, "switch OK");
+		//
+		//BOOT button to AP
+		//
     } else {
         ESP_LOGI(TAG, "HTTP POST request failed: %s", esp_err_to_name(err));
 	//reboot
@@ -360,9 +397,28 @@ void fetch_switch_state() {
 // Task to continuously fetch switch state
 void switch_task(void *pvParameters) {
     while (1) {
-        fetch_switch_state();
+    fetch_switch_state();
     }
 }
+/*
+void switch_task(void *pvParameters) {
+    
+	while (1) {
+    		uint32_t val;
+    		if (xTaskNotifyWait(0x00, 0x00, &val, pdMS_TO_TICKS(10 * 1000))) {
+        		ESP_LOGI(TAG, "BOOT button pressed - entering AP mode");
+
+        		esp_wifi_stop();
+        		esp_wifi_deinit();
+        		start_wifi_ap();
+        		start_webserver();
+    }
+
+    // your regular loop logic here...
+    fetch_switch_state();
+  }
+}
+*/ 
 
 // Stored Configurations
 
@@ -398,24 +454,6 @@ void load_config_from_nvs() {
         nvs_close(nvs_handle);
     }
 }
-
-// HTTP Server Handler for Configuration Page
-/*
-esp_err_t config_handler(httpd_req_t *req) {
-    char buf[512];
-    int ret = httpd_req_recv(req, buf, sizeof(buf));
-    if (ret > 0) {
-        buf[ret] = '\0';
-        sscanf(buf, "api_user=%63s&api_pass=%63s&wifi_ssid=%63s&wifi_pass=%63s&auth_url=%127s&switch_url=%127s", 
-               api_user, api_pass, wifi_ssid, wifi_pass, auth_url, switch_url);
-        save_config_to_nvs();
-        httpd_resp_send(req, "Saved! Rebooting...", HTTPD_RESP_USE_STRLEN);
-        vTaskDelay(pdMS_TO_TICKS(2000));
-        esp_restart();
-    }
-    return ESP_OK;
-}
-*/
 
 // Function to wait for time synchronization
 void obtain_time(void) {
@@ -462,22 +500,316 @@ void verify_time() {
         ESP_LOGI(TAG, "System time is valid: %s", asctime(&timeinfo));
     }
 }
+
+//http interface to get the configuration
+//
+//start wifi AP
+
+#define AP_SSID "ESP32_Setup"
+#define AP_PASS "12345678"
+
+void start_wifi_ap() {
+    esp_netif_init();
+    esp_event_loop_create_default();
+    esp_netif_create_default_wifi_ap();
+
+    wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
+    wifi_config_t wifi_config = {
+        .ap = {
+            .ssid = AP_SSID,
+            .ssid_len = strlen(AP_SSID),
+            .password = AP_PASS,
+            .max_connection = 4,
+            .authmode = WIFI_AUTH_WPA_WPA2_PSK
+        },
+    };
+
+    if (strlen(AP_PASS) == 0) {
+        wifi_config.ap.authmode = WIFI_AUTH_OPEN;
+    }
+
+    esp_wifi_init(&cfg);
+    esp_wifi_set_mode(WIFI_MODE_AP);
+    esp_wifi_set_config(WIFI_IF_AP, &wifi_config);
+    esp_wifi_start();
+
+    ESP_LOGI("WiFi", "Started Wi-Fi AP: %s", AP_SSID);
+}
+
+//
+//
+
+// --- Move these outside any other function ---
+static int from_hex(char c) {
+    return isdigit((unsigned char)c) ? c - '0' : tolower((unsigned char)c) - 'a' + 10;
+}
+
+void url_decode(char *str) {
+    char *p = str;
+    while (*str) {
+        if (*str == '%') {
+            if (str[1] && str[2]) {
+                *p++ = (char)(from_hex(str[1]) << 4 | from_hex(str[2]));
+                str += 3;
+            }
+        } else if (*str == '+') {
+            *p++ = ' ';
+            str++;
+        } else {
+            *p++ = *str++;
+        }
+    }
+    *p = '\0';
+}
+
+//get
+static esp_err_t setup_page_get_handler(httpd_req_t *req) {
+
+const char *html = 
+"<html><body>"
+"<!DOCTYPE html>"
+"<html lang='en'>"
+"<head>"
+  "<meta charset='UTF-8'>"
+  "<title>ESP32 Setup</title>"
+  "<style>"
+    "body {"
+      "font-family: sans-serif;"
+      "display: flex;"
+      "justify-content: center;"
+      "align-items: center;"
+      "height: 100vh;"
+      "background: #f4f4f4;"
+    "}"
+    "form {"
+      "background: white;"
+      "padding: 2rem;"
+      "border-radius: 8px;"
+      "box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
+      "width: 300px;"
+    "}"
+    "input {"
+      "width: 100%;"
+      "margin: 0.5rem 0;"
+      "padding: 0.5rem;"
+    "}"
+    "button {"
+      "padding: 0.5rem;"
+      "width: 100%;"
+      "background: #007bff;"
+      "color: white;"
+      "border: none;"
+      "border-radius: 4px;"
+    "}"
+  "</style>"
+"</head>"
+"<body>"
+  "<form method='POST' action='/setup'>"
+    "<h2>Device Setup</h2>"
+    "<input type='text' name='api_user' placeholder='api_user' required/>"
+    "<input type='password' name='api_pass' placeholder='api_pass' required/>"
+    "<input type='text' name='wifi_ssid' placeholder='wifi ssid' required />"
+    "<input type='password' name='wifi_pass' placeholder='wifi Password' required />"
+    "<input type='text' name='auth_url' placeholder='auth url' required />"
+    "<input type='text' name='switch_url' placeholder='switch url' />"
+    "<input type='text' name='switch_name' placeholder='switch name' />"
+    "<button type='submit'>Save & Connect</button>"
+  "</form>"
+"</body>"
+"</html>";
+    
+    httpd_resp_send(req, html, HTTPD_RESP_USE_STRLEN);
+    return ESP_OK;
+}
+
+//post
+esp_err_t setup_page_post_handler(httpd_req_t *req) {
+    char buf[256];
+    int ret = httpd_req_recv(req, buf, MIN(req->content_len, sizeof(buf)-1));
+    if (ret <= 0) {
+        return ESP_FAIL;
+    }
+    buf[ret] = '\0';
+
+    // Decode the URL-encoded form data
+   
+    url_decode(buf);  
+    //retrive  
+    httpd_query_key_value(buf, "api_pass", api_pass, sizeof(api_pass));
+    httpd_query_key_value(buf, "api_user", api_user, sizeof(api_user));
+    httpd_query_key_value(buf, "api_pass", api_pass, sizeof(api_pass));
+    httpd_query_key_value(buf, "wifi_ssid", wifi_ssid, sizeof(wifi_ssid));
+    httpd_query_key_value(buf, "wifi_pass", wifi_pass, sizeof(wifi_pass));
+    httpd_query_key_value(buf, "auth_url", auth_url, sizeof(auth_url));
+    httpd_query_key_value(buf, "switch_url", switch_url, sizeof(switch_url));
+    httpd_query_key_value(buf, "switch_name", switch_name, sizeof(switch_name));
+    //verify
+   
+    //save to nvs
+    save_config_to_nvs(api_user, api_pass,wifi_ssid,wifi_pass,auth_url,switch_url,switch_name);
+    
+    httpd_resp_send(req, "Settings saved successfully...", HTTPD_RESP_USE_STRLEN);
+    ESP_LOGI(TAG, "Settings saved successfully...");
+    
+    vTaskDelay(1000 / portTICK_PERIOD_MS);
+    esp_restart();
+   
+    return ESP_OK;
+}
+
+//server
+
+httpd_handle_t start_webserver(void) {
+    httpd_config_t config = HTTPD_DEFAULT_CONFIG();
+
+    httpd_handle_t server = NULL;
+    if (httpd_start(&server, &config) == ESP_OK) {
+        httpd_uri_t setup_get_uri = {
+            .uri       = "/setup",
+            .method    = HTTP_GET,
+            .handler   = setup_page_get_handler,
+            .user_ctx  = NULL
+        };
+        httpd_register_uri_handler(server, &setup_get_uri);
+
+        httpd_uri_t setup_post_uri = {
+            .uri       = "/setup",
+            .method    = HTTP_POST,
+            .handler   = setup_page_post_handler,
+            .user_ctx  = NULL
+        };
+        httpd_register_uri_handler(server, &setup_post_uri);
+    }
+
+    return server;
+}
+
+//http interface to get config
+//BOOT (GPIO0) – this one is perfect for use as a manual AP reset trigger!
+//GPIO0 is the BOOT button, which:
+//Is a regular GPIO (when not used for flashing)
+//Has a pull-up resistor by default
+//Is already debounced by hardware
+//Step 1: Define BOOT pin and ISR
+//reset button task
+/*
+#define RESET_BUTTON_GPIO 0
+#define RESET_BUTTON_DEBOUNCE_MS 50
+#define RESET_BUTTON_HOLD_TIME_MS 2000
+
+void reset_button_task(void *pvParameter)
+{
+    gpio_config_t btn_config = {
+        .pin_bit_mask = 1ULL << RESET_BUTTON_GPIO,
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_ENABLE,
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&btn_config);
+
+    bool btn_pressed = false;
+    int64_t press_start = 0;
+
+    while (1) {
+        int level = gpio_get_level(RESET_BUTTON_GPIO);
+
+        if (level == 0 && !btn_pressed) {
+            // Button just pressed
+            btn_pressed = true;
+            press_start = esp_timer_get_time() / 1000; // in ms
+        } else if (level == 1 && btn_pressed) {
+            // Button released
+            int64_t press_duration = (esp_timer_get_time() / 1000) - press_start;
+            btn_pressed = false;
+
+            if (press_duration >= RESET_BUTTON_HOLD_TIME_MS) {
+                ESP_LOGW("RESET_BTN", "Long press detected. Starting fallback AP...");
+
+                esp_wifi_stop();
+                esp_wifi_deinit();
+		start_wifi_ap();
+		start_webserver();
+ clear_wifi_credentials();
+                //AP mode config logic here
+            } else {
+                ESP_LOGI("RESET_BTN", "Short press ignored");
+            }
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(RESET_BUTTON_DEBOUNCE_MS));
+    }
+}
+*/
+#define BUTTON_GPIO GPIO_NUM_0  // Boot button on ESP32 DevKit V4
+
+void button_task(void *pvParameters) {
+    gpio_config_t io_conf = {
+        .pin_bit_mask = (1ULL << BUTTON_GPIO),
+        .mode = GPIO_MODE_INPUT,
+        .pull_up_en = GPIO_PULLUP_ENABLE,  // Pull-up needed for BOOT button
+        .pull_down_en = GPIO_PULLDOWN_DISABLE,
+        .intr_type = GPIO_INTR_DISABLE
+    };
+    gpio_config(&io_conf);
+
+    int button_pressed = 0;
+    int64_t press_start = 0;
+
+    while (1) {
+        int level = gpio_get_level(BUTTON_GPIO);
+        if (level == 0 && !button_pressed) {
+            button_pressed = 1;
+            press_start = esp_timer_get_time() / 1000; // ms
+            printf("Button pressed!\n");
+        } else if (level == 1 && button_pressed) {
+            button_pressed = 0;
+            int64_t press_duration = (esp_timer_get_time() / 1000) - press_start;
+            printf("Button released. Duration: %lld ms\n", press_duration);
+            clear_wifi_credentials();
+                esp_wifi_stop();
+                esp_wifi_deinit();
+            esp_restart();
+		//start_wifi_ap();
+		//start_webserver();
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(50));  // debounce
+    }
+}
+
+//
 //main
 
 void app_main(void) {
-    nvs_flash_init();
-
-    save_config_to_nvs("admin", "admin","Redmi Note 11S","Patientpay2015","https://eapi-vijn.onrender.com/api/token/","https://eapi-vijn.onrender.com/api/switches","switch_1");
-    load_config_from_nvs();
-    gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
-    wifi_init();
-    //load_token_from_nvs();
-    // Verify system time and sync if needed
-    verify_time();
-    get_auth_token();
-    //if (strlen(auth_token) == 0) get_auth_token();
+   nvs_flash_init();
+   load_config_from_nvs();
+   
+    ESP_LOGI(TAG,"api_user : %s",api_user);
+    ESP_LOGI(TAG,"api_pass : %s",api_pass);
+    ESP_LOGI(TAG,"wifi_ssid : %s",wifi_ssid);
+    ESP_LOGI(TAG,"widi_pass : %s",wifi_pass);
+    ESP_LOGI(TAG,"auth_url : %s",auth_url);
+    ESP_LOGI(TAG,"switch_url : %s",switch_url);
+    ESP_LOGI(TAG,"switch_name : %s",switch_name);
+    //clear_wifi_credentials();//
+    //ESP_LOGI(TAG,"old config cleared...");
+    //if (strlen(api_user) == 0 && strlen(api_pass) == 0 && strlen(wifi_ssid) == 0 && strlen(wifi_pass) == 0 && strlen(auth_url) == 0 && strlen(switch_url) == 0 && strlen(switch_name) == 0) {
+    if (strlen(api_user) == 0 || strlen(api_pass) == 0 || strlen(wifi_ssid) == 0 || strlen(wifi_pass) == 0 || strlen(auth_url) == 0 || strlen(switch_url) == 0 || strlen(switch_name) == 0) {
+        start_wifi_ap();
+        start_webserver();
     
-    xTaskCreate(&switch_task, "switch_task", 8192, NULL, 5, NULL);
-   }
+    } else {
+
+        wifi_init();  // Connect to stored Wi-Fi
+
+	verify_time();
+	get_auth_token();
+        gpio_set_direction(LED_GPIO, GPIO_MODE_OUTPUT);
+        xTaskCreate(&switch_task, "switch_task", 8192, NULL, 5, NULL);
+	//xTaskCreate(reset_button_task, "reset_button_task", 2048, NULL, 5, NULL);
+	xTaskCreate(button_task, "button_task", 2048, NULL, 5, NULL);
+        }
+}
 
 
